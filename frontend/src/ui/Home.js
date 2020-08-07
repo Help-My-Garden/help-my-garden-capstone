@@ -1,9 +1,15 @@
 import React from "react"
+import 'bootstrap/dist/css/bootstrap.css';
+import {NavbarCom} from "./Navbar";
+import {JumbotronCom} from "./Jumbotron";
+import {CarouselCom} from "./Carousel";
 
-export const Home = () => {
-	return (
+export const Home = () => (
+
 		<>
-			<h1>Hello!!!!</h1>
+			<NavbarCom></NavbarCom>
+			<JumbotronCom></JumbotronCom>
+			<CarouselCom></CarouselCom>
 		</>
-	)
-}
+
+)

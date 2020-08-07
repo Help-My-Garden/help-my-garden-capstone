@@ -6,6 +6,7 @@ import {Route, Switch} from "react-router";
 import {FourOhFour} from "./ui/FourOhFour";
 import {Home} from "./ui/Home";
 
+
 const Routing = () => (
 	<>
 		<BrowserRouter>
@@ -14,6 +15,7 @@ const Routing = () => (
 				<Route component={FourOhFour}/>
 			</Switch>
 		</BrowserRouter>
+
 	</>
 );
 ReactDOM.render(<Routing/>, document.querySelector('#root'));
