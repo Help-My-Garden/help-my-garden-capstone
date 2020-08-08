@@ -5,10 +5,17 @@ export const JumbotronInfo = () => {
   return (
     <>
       <Jumbotron>
-        <p>
-          This is a simple hero unit, a simple jumbotron-style component for calling
-          extra attention to featured content or information.
-        </p>
+        <h1>plant name</h1>
+        <ul>
+          <li>State:</li>
+          <li>Family Name:</li>
+          <li>Common Name:</li>
+          <li>Scientific Name:</li>
+          <li>Color:</li>
+          <li>Duration:</li>
+          <li>Light Preference:</li>
+          <li>Size:</li>
+        </ul>
       </Jumbotron>
     </>
   )
