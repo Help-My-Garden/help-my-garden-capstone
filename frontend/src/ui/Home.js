@@ -1,9 +1,9 @@
 import React from "react"
+import {NavbarCom} from "./Navbar";
 
-export const Home = () => {
-	return (
+export const Home = () => (
+
 		<>
-			<h1>Hello!!!!</h1>
+			<NavbarCom></NavbarCom>
 		</>
 	)
-}
