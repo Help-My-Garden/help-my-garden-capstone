@@ -6,7 +6,9 @@ export const JumbotronCom = () => {
 
 	return (
 		<>
-			<Jumbotron>
+			<Jumbotron style={{
+				margin: "2rem 3em 2rem 3rem",
+			}}>
 				<p>
 					This is a simple hero unit, a simple jumbotron-style component for calling
 					extra attention to featured content or information.
