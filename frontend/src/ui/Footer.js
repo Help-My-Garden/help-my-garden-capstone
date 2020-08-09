@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export const Footer = () => {
 
 	return (
@@ -12,8 +11,8 @@ export const Footer = () => {
 					color: "white",
 				}}>
 					<div className="row">
-						<p>API Trefle:<button>https://trefle.io/</button></p>
-						<p className="col-4 mb-0">Help My Garden Team</p>
+						<p className="col-4 mb-0">API:Trefle </p>
+						<p className="col-4 mb-0 text-center">Help My Garden Team</p>
 						<p className="col-4 mb-0 text-right">Last Updated</p>
 					</div>
 				</footer>
