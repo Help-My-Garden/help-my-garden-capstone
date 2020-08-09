@@ -1,7 +1,6 @@
 import React from "react";
 import Carousel from "react-bootstrap/cjs/Carousel";
 
-
 export const CarouselCom = () => {
 
 	return(
@@ -11,7 +10,7 @@ export const CarouselCom = () => {
 		}} >
 			<Carousel.Item>
 				<img
-					className="d-block w-100 h-100"
+					className="img-fluid d-block w-100 h-100"
 					src="/frontend/public/logo512.png"
 					alt="First slide"
 				/>
