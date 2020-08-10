@@ -1,11 +1,11 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.css';
-import {NavbarInfo} from "./NavbarInfo"
+import {Navbar} from "./Navbar"
 import {JumbotronInfo} from "./JumbotronInfo";
 
 export const Info = () => (
   <>
-    <NavbarInfo></NavbarInfo>
+    <Navbar></Navbar>
     <JumbotronInfo></JumbotronInfo>
   </>
 
