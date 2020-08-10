@@ -11,7 +11,7 @@ export const Footer = () => {
 					color: "white",
 				}}>
 					<div className="row">
-						<p className="col-4 mb-0">API:Trefle </p>
+						<a href="https://github.com/ddc-fullstack-cohort-30/lecture-notes" className="col-4 mb-0">API:Trefle </a>
 						<p className="col-4 mb-0 text-center">Help My Garden Team</p>
 						<p className="col-4 mb-0 text-right">Last Updated</p>
 					</div>

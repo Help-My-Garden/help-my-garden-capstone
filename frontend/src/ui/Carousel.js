@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "react-bootstrap/cjs/Carousel";
+import image from "./shared/600x400.jpg"
 
 export const CarouselCom = () => {
 
@@ -11,7 +12,7 @@ export const CarouselCom = () => {
 			<Carousel.Item>
 				<img
 					className="img-fluid d-block w-100 h-100"
-					src="/frontend/public/logo512.png"
+					src={image}
 					alt="First slide"
 				/>
 				<Carousel.Caption>
@@ -22,7 +23,7 @@ export const CarouselCom = () => {
 			<Carousel.Item>
 				<img
 					className="d-block w-100 h-100"
-					src="/frontend/public/logo512.png"
+					src= {image}
 					alt="Third slide"
 				/>
 
@@ -34,7 +35,7 @@ export const CarouselCom = () => {
 			<Carousel.Item>
 				<img
 					className="d-block w-100 h-100"
-					src="/frontend/public/logo512.png"
+					src= {image}
 					alt="Third slide"
 				/>
 
