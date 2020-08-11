@@ -6,6 +6,7 @@ export const Home = () => {
 		<>
 			<h1>Hello!!!!</h1>
 			<Link to="/Info"><button> go to info</button></Link>
+			<Link to="/AboutUs"><button> go to about</button></Link>
 		</>
 	)
 }
