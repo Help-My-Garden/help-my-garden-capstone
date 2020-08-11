@@ -4,7 +4,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 import image from "./shared/world-logo-black.png"
 
-export const NavbarCom = () => {
+export function NavbarCom () {
 
 	return (
 		<>

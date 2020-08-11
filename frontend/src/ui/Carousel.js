@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-bootstrap/cjs/Carousel";
 import image from "./shared/600x400.jpg"
 
-export const CarouselCom = () => {
+export function CarouselCom () {
 
 	return(
 		<Carousel className="container-md" style={{

@@ -2,7 +2,7 @@ import React from "react";
 import Jumbotron from "react-bootstrap/cjs/Jumbotron";
 import Button from "react-bootstrap/cjs/Button";
 
-export const JumbotronCom = () => {
+export function JumbotronCom () {
 
 	return (
 		<>
