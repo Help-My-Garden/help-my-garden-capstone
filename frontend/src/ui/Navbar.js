@@ -8,7 +8,7 @@ export const NavbarCom = () => {
 	return (
 		<>
 			<Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
-				<Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+				<Navbar.Brand href="#home">Help My Garden</Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Nav className="ml-auto">
