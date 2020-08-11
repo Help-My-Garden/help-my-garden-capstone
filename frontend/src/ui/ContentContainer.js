@@ -7,7 +7,7 @@ export function ContentContainerCom () {
 		<>
 			<section className="container" style={{
 				backgroundColor: "grey",
-				margin: "2rem auto 2rem auto",
+				margin: "2rem auto 1rem auto",
 				padding: "1rem",
 			}}>
 				<ContentCardsCom/>
