@@ -8,10 +8,16 @@ import {Footer} from "./Footer";
 export const Home = () => {
 	return (
 		<>
-			<NavbarCom/>
-			<JumbotronCom/>
-			<CarouselCom/>
-			<Footer/>
+			<div style={{
+				display: "block",
+				margin: "2rem 4rem 2rem 4rem",
+				backgroundColor: "grey",
+			}}>
+				<NavbarCom/>
+				<JumbotronCom/>
+				<CarouselCom/>
+				<Footer/>
+				</div>
 			</>
 	)
 }
