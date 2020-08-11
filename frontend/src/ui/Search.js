@@ -5,8 +5,12 @@ export const SearchCom = () => {
 
 	return (
 		<>
-			<section className="container bg-dark">
-				<div className="row">
+			<section className="container-md" style={{
+				backgroundColor: "lightgrey",
+				margin: "2rem auto 2rem auto",
+				borderRadius: "20px",
+			}}>
+				<div className="row p-2">
 					<div className = "information col-2" >
 						<label className = "form-label" >State
 							<input className = "form-control col-md-12" type = "text" name = "State" id = "State"
@@ -37,9 +41,10 @@ export const SearchCom = () => {
 										 placeholder = "Color" />
 						</label >
 					</div >
-					<div className="col-12"></div>
+					<div className="col-12 p-2">
 						<Button>Search</Button>
 					</div>
+				</div>
 			</section>
 		</>
 	)

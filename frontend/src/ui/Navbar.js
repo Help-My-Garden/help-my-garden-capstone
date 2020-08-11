@@ -14,10 +14,9 @@ export const NavbarCom = () => {
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Nav className="ml-auto">
-						<Nav.Link href="#features">Search</Nav.Link>
-						<Nav.Link href="#pricing">Creat Account</Nav.Link>
+						<Nav.Link href="#features">Home</Nav.Link>
 						<NavDropdown title="Account" id="collasible-nav-dropdown">
-							<NavDropdown.Item href="#action/3.1">Log In</NavDropdown.Item>
+							<NavDropdown.Item href="#action/3.1">My List</NavDropdown.Item>
 						</NavDropdown>
 					</Nav>
 				</Navbar.Collapse>
