@@ -1,0 +1,38 @@
+<div>
+    <img src="ERDFinal.png" alt="erd for Help My Garden">
+</div>
+<div>
+    <h1>Profile</h1>
+    <ul>
+        <li>Profile Id (PK)</li>
+        <li>ProfileName</li>
+        <li>ProfileEmail</li>
+        <li>profileHash</li>
+        <li>profileActivationTocken</li>
+    </ul>
+</div>
+<div>
+    <h1>PlantInfo</h1>
+    <ul>
+        <li>PlantInfo id (PK)</li>
+        <li>PlantInfoProfile id (FK)</li>
+        <li>PlantInfoFamilyName</li>
+        <li>PlantInfoCommonName</li>
+        <li>PlantInfoScientificName</li>
+        <li>PlantInfoColor</li>
+        <li>PlantInfoDuration</li>
+        <li>PlantInfoSunLight</li>
+        <li>PlantInfoSize</li>
+    </ul>
+</div>
+<div>
+    <h1>PlantImage</h1>
+    <ul>
+        <li>PlantImage id (PK)</li>
+        <li>PlantImageInfo id (FK)</li>
+        <li>PlantImageState</li>
+        <li>PlantImageFamilyName</li>
+        <li>PlantImageColor</li>
+        <li>PlantImageDuration</li>
+    </ul>
+</div>
