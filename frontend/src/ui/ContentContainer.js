@@ -1,6 +1,7 @@
 import React from "react";
+import {ContentCardsCom} from "./ContentCards";
 
-export function ContentCom () {
+export function ContentContainerCom () {
 
 	return(
 		<>
@@ -8,7 +9,7 @@ export function ContentCom () {
 				backgroundColor: "grey",
 				margin: "2rem auto 2rem auto",
 			}}>
-				<h1>hello</h1>
+				<ContentCardsCom/>
 			</section>
 		</>
 	)

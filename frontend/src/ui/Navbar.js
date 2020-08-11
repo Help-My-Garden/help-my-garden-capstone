@@ -10,7 +10,7 @@ export function NavbarCom () {
 		<>
 			<Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
 				<img src = {image} alt = "Help My Garden logo" width="100"/>
-				<Navbar.Brand href="#home">Help My Garden</Navbar.Brand>
+				<Navbar.Brand>Help My Garden</Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Nav className="ml-auto">
