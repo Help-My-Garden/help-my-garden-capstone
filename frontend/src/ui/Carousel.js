@@ -7,11 +7,10 @@ export const CarouselCom = () => {
 	return(
 		<Carousel className="container-md" style={{
 			backgroundColor: 'grey',
-			height: '500px',
 		}} >
 			<Carousel.Item>
 				<img
-					className="img-fluid d-block w-100 h-100"
+					className="img-fluid"
 					src={image}
 					alt="First slide"
 				/>
@@ -22,7 +21,7 @@ export const CarouselCom = () => {
 			</Carousel.Item>
 			<Carousel.Item>
 				<img
-					className="d-block w-100 h-100"
+					className="img-fluid"
 					src= {image}
 					alt="Third slide"
 				/>
@@ -34,7 +33,7 @@ export const CarouselCom = () => {
 			</Carousel.Item>
 			<Carousel.Item>
 				<img
-					className="d-block w-100 h-100"
+					className="img-fluid"
 					src= {image}
 					alt="Third slide"
 				/>
