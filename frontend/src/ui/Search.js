@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "react-bootstrap/cjs/Button";
 
-export const SearchCom = () => {
+export function SearchCom () {
 
 	return (
 		<>

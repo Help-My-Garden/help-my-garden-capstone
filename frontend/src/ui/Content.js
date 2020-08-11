@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ContentCom = () => {
+export function ContentCom () {
 
 	return(
 		<>
