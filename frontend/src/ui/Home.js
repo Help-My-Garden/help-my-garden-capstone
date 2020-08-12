@@ -1,16 +1,11 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.css';
-import {NavbarCom} from "./Navbar";
-import {SearchCom} from "./Search";
-import {ContentContainerCom} from "./ContentContainer";
 
 
 export const Home = () => {
 	return (
 		<>
-			<NavbarCom/>
-			<SearchCom/>
-			<ContentContainerCom/>
+			<h1>Home Page</h1>
 		</>
 	)
 }
