@@ -38,24 +38,41 @@ export function NavbarCom () {
 			</Navbar>
 
 			{/*log in modal*/}
-			<Modal show={show} onHide={handleClose}>
-				<Modal.Header closeButton>
-					<Modal.Title>Modal heading</Modal.Title>
+			<Modal show={show} onHide={handleClose}
+						 size="sm"
+			>
+				<Modal.Header closeButton  style={{
+					backgroundColor: "grey",
+				}}>
+					<Modal.Title>Log In</Modal.Title>
 				</Modal.Header>
-				<Modal.Body>
-					I'm modal number 1!
-				</Modal.Body>
-				<Modal.Footer>
-					<Button variant="secondary" onClick={handleClose}>
-						Close
-					</Button>
+				<Modal.Body style={{
+					backgroundColor: "grey",
+				}}>
+					<form action = "./apis/" >
+						<div className = "information" >
+							<label className = "form-label" >User Name
+								<input className = "form-control col-md-12" type = "text" name = "userName" id = "userName"
+											 placeholder = "User Name" />
+							</label >
+						</div >
+						<div className = "information" >
+							<label className = "form-label" >Password
+								<input className = "form-control col-md-12" type = "password" name = "password" id = "password"
+											 placeholder = "Password" />
+							</label >
+						</div >
+					</form >
 					<Button variant="primary" onClick={handleClose}>
-						Save Changes
+						Log In
 					</Button>
-				</Modal.Footer>
+				</Modal.Body>
+
+
+
 			</Modal>
 
-			{/*creat account  modal*/}
+			{/*creat account modal*/}
 			<Modal show={show2} onHide={handleClose2}>
 				<Modal.Header closeButton>
 					<Modal.Title>Modal heading</Modal.Title>
