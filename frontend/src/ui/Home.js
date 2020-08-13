@@ -28,9 +28,7 @@ export const Home = () => {
 			<Button variant="primary">Learn more</Button>
 			</p>
 			</Jumbotron>
-			<Carousel className="container-md" style={{
-				backgroundColor: 'grey',
-			}} >
+			<Carousel className="container">
 				<Carousel.Item>
 					<img
 						className="img-fluid"
