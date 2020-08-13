@@ -14,7 +14,7 @@ export function NavbarCom () {
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Nav className="ml-auto">
-						<Nav.Link href="#features">Home</Nav.Link>
+						<Nav.Link href="/">Home</Nav.Link>
 						<NavDropdown title="Account" id="collasible-nav-dropdown">
 							<NavDropdown.Item href="#action/3.1">My List</NavDropdown.Item>
 						</NavDropdown>
