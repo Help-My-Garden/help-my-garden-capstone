@@ -1,6 +1,6 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.css';
-import {JumbotronInfo} from "../help-my-garden-capstone/frontend/src/ui/JumbotronInfo";
+import {JumbotronInfo} from "./JumbotronInfo";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -19,12 +19,12 @@ export const Info = () => (
           <Nav.Link href="/" style={{color: "white",}}>Home</Nav.Link>
           <Nav.Link href="/search" style={{color: "white",}}>Search</Nav.Link>
           <NavDropdown title="Account " id="collapsible-nav-dropdown">
-            <NavDropdown.Item href="#log-in-modal">My list</NavDropdown.Item>
+            <NavDropdown.Item href="/my-list">My list</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-    <JumbotronInfo></JumbotronInfo>
+    <JumbotronInfo/>
   </>
 
 )
