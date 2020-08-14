@@ -11,7 +11,6 @@ import {NavbarCom} from "./ui/Navbar";
 const Routing = () => (
 	<>
 		<BrowserRouter>
-			<NavbarCom/>
 			<Switch>
 				<Route exact path="/" component={Home}/>
 				<Route component={FourOhFour}/>
