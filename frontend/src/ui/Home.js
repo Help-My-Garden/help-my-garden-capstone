@@ -1,6 +1,6 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.css';
-import {NavbarCom} from "./UniversalNavbar";
+import {NavbarCom} from "./Navbar";
 
 export const Home = () => {
 	return (
