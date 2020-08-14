@@ -1,12 +1,10 @@
 import React from "react";
 import Button from "react-bootstrap/cjs/Button";
-import {NavbarCom} from "./UniversalNavbar";
 
 export function SearchCom () {
 
 	return (
 		<>
-			<NavbarCom/>
 			<section className="container-md" style={{
 				backgroundColor: "lightgrey",
 				margin: "2rem auto 2rem auto",

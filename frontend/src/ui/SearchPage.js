@@ -1,6 +1,6 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.css';
-import {NavbarCom} from "./Navbar";
+import {NavbarCom} from "./UniversalNavbar";
 import {SearchCom} from "./Search";
 import {ContentContainerCom} from "./ContentContainer";
 
