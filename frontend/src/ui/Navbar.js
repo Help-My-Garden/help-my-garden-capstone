@@ -29,7 +29,7 @@ export function NavbarCom () {
 					<Navbar.Toggle className="ml-auto" aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse id="responsive-navbar-nav">
 						<Nav className="ml-auto">
-							<Nav.Link href="#search" style={{color: "white",}}>Search</Nav.Link>
+							<Nav.Link href="/search" style={{color: "white",}}>Search</Nav.Link>
 							<Nav.Link href="#creat-account" onClick={handleShow2} style={{color: "white",}}>Creat Account</Nav.Link>
 							<NavDropdown title="Account " id="collapsible-nav-dropdown">
 								<NavDropdown.Item href="#log-in-modal" onClick={handleShow}>Log In</NavDropdown.Item>
