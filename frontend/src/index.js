@@ -15,7 +15,6 @@ function Routing (){
 				<Route component={FourOhFour}/>
 			</Switch>
 		</BrowserRouter>
-
 	</>
 	)
 }

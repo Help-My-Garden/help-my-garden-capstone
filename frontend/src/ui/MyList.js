@@ -3,7 +3,7 @@ import {SearchCom} from "./Search";
 import Navbar from "react-bootstrap/Navbar";
 import image from "./shared/world-logo-black.png";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import {MyListCard} from "./MyListCard";
 
 export const MyListCom = () =>{
 	return(
@@ -25,7 +25,7 @@ export const MyListCom = () =>{
 		<div className="container" style={{
 			backgroundColor: "grey",
 		}}>
-			<h2>I'm the container</h2>
+			<MyListCard/>
 		</div>
 			</>
 	)
