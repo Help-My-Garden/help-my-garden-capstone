@@ -23,7 +23,7 @@ export const SearchPage = () => {
 						<Nav className="ml-auto">
 							<Nav.Link href="/" style={{color: "white",}}>Home</Nav.Link>
 							<NavDropdown title="Account " id="collapsible-nav-dropdown">
-								<NavDropdown.Item href="#log-in-modal">My list</NavDropdown.Item>
+								<NavDropdown.Item href="/my-list">My list</NavDropdown.Item>
 							</NavDropdown>
 						</Nav>
 					</Navbar.Collapse>
