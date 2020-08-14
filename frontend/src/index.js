@@ -7,6 +7,7 @@ import {FourOhFour} from "./ui/FourOhFour";
 import {Home} from "./ui/Home";
 import {NavbarCom} from "./ui/Navbar";
 
+
 const Routing = () => (
 	<>
 		<BrowserRouter>
@@ -16,6 +17,7 @@ const Routing = () => (
 				<Route component={FourOhFour}/>
 			</Switch>
 		</BrowserRouter>
+
 	</>
 );
 ReactDOM.render(<Routing/>, document.querySelector('#root'));
