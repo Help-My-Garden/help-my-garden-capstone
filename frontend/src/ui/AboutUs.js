@@ -9,7 +9,7 @@ export const AboutUs = (props) => {
       <Container>
         <Row>
           <Col xs={{ size: 12}}>
-            <Jumbotron fluid>
+            <Jumbotron>
               <h1>About Help My Garden!</h1>
               <p>this would be about the website Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
               <p>this would be about James Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>

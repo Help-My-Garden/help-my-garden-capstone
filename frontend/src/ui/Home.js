@@ -4,9 +4,8 @@ import {Link } from "react-router-dom";
 export const Home = () => {
 	return (
 		<>
-			<h1>Hello!!!!</h1>
-			<Link to="/Info"><button> go to info</button></Link>
-			<Link to="/AboutUs"><button> go to about</button></Link>
+			<h1>Home Page</h1>
+
 		</>
 	)
 }
