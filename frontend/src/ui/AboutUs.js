@@ -7,7 +7,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons/faLinkedin";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import {image} from "./shared/world-logo-black.png"
+import image from "./shared/world-logo-black.png"
 
 
 export const AboutUs = (props) => {
@@ -50,15 +50,15 @@ export const AboutUs = (props) => {
         <div className="row">
           <div className="col-4 text-white">
             <p>Help My Garden</p>
-            <FontAwesomeIcon icon={faGithub} color="white" size="4x" />
+            <FontAwesomeIcon icon={faGithub} color="white" size="3x" />
           </div>
           <div className="col-4 text-white">
             <p>Dylan Draad</p>
-            <FontAwesomeIcon icon={faLinkedin} color="blue" size="4x"/>
+            <FontAwesomeIcon icon={faLinkedin} color="blue" size="3x"/>
           </div>
           <div className="col-4 text-white">
             <p>James Mathieus Jr</p>
-            <FontAwesomeIcon icon={faLinkedin} color="blue" size="4x"/>
+            <FontAwesomeIcon icon={faLinkedin} color="blue" size="3x"/>
           </div>
         </div>
       </footer>
