@@ -5,12 +5,29 @@ import Navbar from "react-bootstrap/Navbar";
 import {faGithub} from "@fortawesome/free-brands-svg-icons/faGithub";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons/faLinkedin";
+import Nav from "react-bootstrap/Nav";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 
 export const AboutUs = (props) => {
   return (
     <>
-
+      <Navbar className="row fluid navbar-dark" collapseOnSelect expand="md" style={{
+        backgroundColor: "black",
+      }}>
+        <img src = {image} alt = "Help My Garden logo" width="100"/>
+        <Navbar.Brand style={{color: "white",}}>Help My Garden</Navbar.Brand>
+        <Navbar.Toggle className="ml-auto" aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ml-auto">
+            <Nav.Link href="/" style={{color: "white",}}>Home</Nav.Link>
+            <Nav.Link href="/search" style={{color: "white",}}>Search</Nav.Link>
+            <NavDropdown title="Account " id="collapsible-nav-dropdown">
+              <NavDropdown.Item href="/my-list">My list</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
       <Container>
         <Row>
           <Col xs={{ size: 12}}>
