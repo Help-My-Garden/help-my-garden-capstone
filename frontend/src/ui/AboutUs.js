@@ -23,9 +23,6 @@ export const AboutUs = (props) => {
           <Nav className="ml-auto">
             <Nav.Link href="/" style={{color: "white",}}>Home</Nav.Link>
             <Nav.Link href="/search" style={{color: "white",}}>Search</Nav.Link>
-            <NavDropdown title="Account " id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="/my-list">My list</NavDropdown.Item>
-            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -48,17 +45,23 @@ export const AboutUs = (props) => {
         backgroundColor: "black",
       }}>
         <div className="row">
-          <div className="col-4 text-white">
-            <p>Help My Garden</p>
-            <FontAwesomeIcon icon={faGithub} color="white" size="3x" />
+          <div className="col-4">
+            <button className="btn text-white" style={{backgroundColor: "green",}}>
+              <p>Help My Garden</p>
+              <FontAwesomeIcon icon={faGithub} color="black" size="3x" />
+            </button>
           </div>
-          <div className="col-4 text-white">
-            <p>Dylan Draad</p>
-            <FontAwesomeIcon icon={faLinkedin} color="blue" size="3x"/>
+          <div className="col-4">
+            <button className="btn text-white">
+              <p>Dylan Draad</p>
+              <FontAwesomeIcon icon={faLinkedin} color="blue" size="3x"/>
+            </button>
           </div>
-          <div className="col-4 text-white">
-            <p>James Mathieus Jr</p>
-            <FontAwesomeIcon icon={faLinkedin} color="blue" size="3x"/>
+          <div className="col-4">
+            <button className="btn text-white">
+              <p>James Mathieus Jr</p>
+              <FontAwesomeIcon icon={faLinkedin} color="blue" size="3x"/>
+            </button>
           </div>
         </div>
       </footer>
