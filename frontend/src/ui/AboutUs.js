@@ -1,11 +1,16 @@
 import React from "react";
 import Jumbotron from "react-bootstrap/cjs/Jumbotron";
 import {Container, Row, Col} from 'reactstrap';
+import Navbar from "react-bootstrap/Navbar";
+import {faGithub} from "@fortawesome/free-brands-svg-icons/faGithub";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faLinkedin} from "@fortawesome/free-brands-svg-icons/faLinkedin";
 
 
 export const AboutUs = (props) => {
   return (
     <>
+
       <Container>
         <Row>
           <Col xs={{ size: 12}}>
@@ -21,6 +26,24 @@ export const AboutUs = (props) => {
           </Col>
         </Row>
       </Container>
+      <footer className="container-fluid text-center" style={{
+        backgroundColor: "black",
+      }}>
+        <div className="row">
+          <div className="col-4 text-white">
+            <p>Help My Garden</p>
+            <FontAwesomeIcon icon={faGithub} color="white" size="4x" />
+          </div>
+          <div className="col-4 text-white">
+            <p>Dylan Draad</p>
+            <FontAwesomeIcon icon={faLinkedin} color="blue" size="4x"/>
+          </div>
+          <div className="col-4 text-white">
+            <p>James Mathieus Jr</p>
+            <FontAwesomeIcon icon={faLinkedin} color="blue" size="4x"/>
+          </div>
+        </div>
+      </footer>
     </>
   )
 }
