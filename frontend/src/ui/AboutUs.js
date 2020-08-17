@@ -13,7 +13,7 @@ import image from "./shared/world-logo-black.png"
 export const AboutUs = (props) => {
   return (
     <>
-      <Navbar className="row fluid navbar-dark" collapseOnSelect expand="md" style={{
+      <Navbar className="navbar-dark" collapseOnSelect expand="md" style={{
         backgroundColor: "black",
       }}>
         <img src = {image} alt = "Help My Garden logo" width="100"/>
@@ -41,23 +41,23 @@ export const AboutUs = (props) => {
           </Col>
         </Row>
       </Container>
-      <footer className="container-fluid text-center" style={{
+      <footer className="container-fluid" style={{
         backgroundColor: "black",
       }}>
-        <div className="row">
-          <div className="col-4">
-            <button className="btn text-white" style={{backgroundColor: "green",}}>
-              <p>Help My Garden</p>
-              <FontAwesomeIcon icon={faGithub} color="black" size="3x" />
-            </button>
-          </div>
-          <div className="col-4">
+        <div className="row justify-content-center">
+          <div className="col-md-2 text-center">
             <button className="btn text-white">
               <p>Dylan Draad</p>
               <FontAwesomeIcon icon={faLinkedin} color="blue" size="3x"/>
             </button>
           </div>
-          <div className="col-4">
+          <div className="col-md-2 text-center">
+            <button className="btn text-white">
+              <p>Help My Garden</p>
+              <FontAwesomeIcon icon={faGithub} color="green" size="3x" />
+            </button>
+          </div>
+          <div className="col-md-2 text-center">
             <button className="btn text-white">
               <p>James Mathieus Jr</p>
               <FontAwesomeIcon icon={faLinkedin} color="blue" size="3x"/>
