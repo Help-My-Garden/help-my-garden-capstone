@@ -6,13 +6,13 @@ import {faGithub} from "@fortawesome/free-brands-svg-icons/faGithub";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons/faLinkedin";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import image from "./shared/world-logo-black.png"
 
 
 export const AboutUs = (props) => {
   return (
     <>
+      {/*navbar*/}
       <Navbar className="navbar-dark" collapseOnSelect expand="md" style={{
         backgroundColor: "black",
       }}>
@@ -26,6 +26,8 @@ export const AboutUs = (props) => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+
+      {/*jumbotrons*/}
       <Container>
         <Row>
           <Col xs={{ size: 12}}>
@@ -37,16 +39,16 @@ export const AboutUs = (props) => {
             <Jumbotron>
               <h2>Meet the Team!</h2>
               <p>We are a team of web developers in New Mexico with a goal. That goal is to make beautiful websites that have reusable easy to understand content. One of the things we dislike is an unusable site that has way to many bells and whistles. Sites should be something easy to use rather than needing to come with an instruction manual. With this vision in mind Help My Garden was born.</p>
-              <h3>Dylan Deraad</h3>
+              <h4>Dylan Deraad</h4>
               <p>Hello!</p>
-              <h3>James Mathieus Jr</h3>
+              <h4>James Mathieus Jr</h4>
               <p>Hi! Welcome to Help My Garden, <br/> I am one of the creators of Help My Garden. I want to thank you for using our site it means a lot to me. I am a Web Developer in the state of New Mexico. I was born in Paducah, Kentucky in 1992. I moved to New Mexico in 1997 when I was 5 years old. </p>
-
-
             </Jumbotron>
           </Col>
         </Row>
       </Container>
+
+      {/*footer*/}
       <footer className="container-fluid" style={{
         backgroundColor: "black",
       }}>
