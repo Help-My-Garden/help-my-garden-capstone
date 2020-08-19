@@ -72,8 +72,8 @@ export const Home = () => {
 				color: "white",
 			}}>
 				<div className="row">
-					<a href="https://github.com/ddc-fullstack-cohort-30/lecture-notes" className="col-4 mb-0">API:Trefle </a>
-					<p className="col-4 mb-0 text-center">Help My Garden Team</p>
+					<a href="https://docs.trefle.io/" className="col-4 mb-0">API:Trefle </a>
+					<a href="/about-us" className="col-4 mb-0 text-center">Help My Garden Team</a>
 					<p className="col-4 mb-0 text-right">Last Updated</p>
 				</div>
 			</footer>

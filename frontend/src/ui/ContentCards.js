@@ -9,16 +9,20 @@ export function ContentCardsCom() {
 			<div className = "row" >
 				<div className = "col-md-6" >
 					<div className = "row" >
-						<div className = "col-md-6" >
-							<p style = {{
-								color: "blue",
-								textDecoration: "underline",
-							}} >
-								Rose</p >
-							<img src = {image} alt = "Logo" style = {{
-								width: "250px",
-							}} />
-						</div >
+						<a href = "/info" >
+							<div className = "col-md-6" >
+
+								<p style = {{
+									color: "blue",
+									textDecoration: "underline",
+								}} >
+									Rose</p >
+								<img src = {image} alt = "Logo" style = {{
+									width: "250px",
+								}} />
+
+							</div >
+						</a >
 						<div className = "col-md-6" >
 							<div className = "row" style = {{
 								backgroundColor: "white",
@@ -36,16 +40,20 @@ export function ContentCardsCom() {
 				</div >
 				<div className = "col-md-6" >
 					<div className = "row" >
-						<div className = "col-md-6" >
-							<p style = {{
-								color: "blue",
-								textDecoration: "underline",
-							}} >
-								Rose</p >
-							<img src = {image} alt = "Logo" style = {{
-								width: "250px",
-							}} />
-						</div >
+						<a href = "/info" >
+							<div className = "col-md-6" >
+
+								<p style = {{
+									color: "blue",
+									textDecoration: "underline",
+								}} >
+									Rose</p >
+								<img src = {image} alt = "Logo" style = {{
+									width: "250px",
+								}} />
+
+							</div >
+						</a >
 						<div className = "col-md-6" >
 							<div className = "row" style = {{
 								backgroundColor: "white",

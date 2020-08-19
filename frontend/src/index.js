@@ -15,11 +15,10 @@ function Routing (){
 	<>
 		<BrowserRouter>
 			<Switch>
-				<Route exact path="/about-us" component={AboutUs}/>
+				<Route exact path="/" component={Home}/>
 				<Route exact path="/search" component={SearchPage}/>
 				<Route exact path="/info" component={Info}/>
 				<Route exact path="/my-list" component={MyListCom}/>
-				<Route exact path="/" component={Home}/>
 				<Route exact path="/about-us" component={AboutUs}/>
 				<Route component={FourOhFour}/>
 			</Switch>
