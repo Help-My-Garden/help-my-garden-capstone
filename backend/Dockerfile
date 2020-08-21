@@ -22,7 +22,7 @@ RUN chown node:node ./
 
 USER node
 
-COPY package.json package-lock.json ./
+COPY package.json ./
 RUN npm install --no-optional && npm cache clean --force
 
 
