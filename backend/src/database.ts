@@ -2,7 +2,7 @@ import { createPool, Pool } from 'mysql2/promise'
 
 require('dotenv').config()
 
-// Database connection. Can use config from .env file (based on example.env) or the defaults
+// Database connection. Can use config from help-my-garden.env file (based on example.env) or the defaults
 
 export async function connect (): Promise<Pool> {
     const connection = await createPool({

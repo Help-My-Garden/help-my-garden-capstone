@@ -16,7 +16,7 @@ export class App {
         this.routes()
     }
 
-    // private method that sets the port for the sever, to one from index.route.ts, and external .env file or defaults to 3000
+    // private method that sets the port for the sever, to one from index.route.ts, and external help-my-garden.env file or defaults to 3000
     public settings () {
         this.app.set('port', this.port || process.env.PORT || 3000)
     }
