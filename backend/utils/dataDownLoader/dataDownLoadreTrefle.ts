@@ -1,33 +1,35 @@
 import axios from "axios"
+import {Plant} from "../interfaces/Plant";
+import {insertPlant} from "../plant/insertPlant";
 require('dotenv').config()
 
 
 function dataDownloader() : Promise<any> {
-    return main()
-    async function main() {
+    return downloadPlants()
+    /*async function main() {
         try {
             await downloadPlants()
 
         } catch (e) {
             console.log(e)
         }
-    }
+    }*/
 
     async function downloadPlants() {
         try {
             const {data} = await axios.get(`https://trefle.io/api/v1/distributions/nwm/plants/?token=${process.env.API_KEY}`)
 
-            const createPlants = (array: any[]) : Plant[] => {
-                // Change this part.  Instead of putting the posts into an arrray insert them into the database.
-                // See https://github.com/Deep-Dive-Coding-Fullstack-Licensing/example-capstone/blob/development/backend/utils/tweet/insertTweet.ts for example.
-                for(let currentPlant of array) {
-                    let plants : Plant = {plantId: null, postUserId: currentPost.userId, postContent: currentPost.body, postTitle: currentPost.title}
-                    console.log(plants)
-                }
-                return posts
-            }
+            const dataArray = data.data
 
-            console.table(data.data)
+                for(let currentPlant of dataArray) {
+                    const plantData = await axios.get(`https://trefle.io/api/v1/distributions/nwm/plants/${currentPlant.id}/?token=${process.env.API_KEY}`)
+                    const mainSpecies = plantData.data.data.main_species
+                    console.log(mainSpecies.flower.color?.join(", ") ?? null)
+
+    /*                let plant : Plant = {plantId: null, plantColor: mainSpecies.flower.color?.join(", ") ?? null , plantFamilyName: currentPlant.family_common_name, plantCommonName: currentPlant.common_name, plantScientificName: currentPlant.scientific_name, plantImageUrl: currentPlant.image_url}*/
+
+
+                }
 
         } catch (error) {
             console.error(error)
