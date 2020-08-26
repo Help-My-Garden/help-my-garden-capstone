@@ -1,5 +1,5 @@
 import {connect} from "../../src/database";
-import {Profile} from "../interfaces/Profile";
+import {Profile} from "../interfaces/profile";
 
 export async function insertProfile(profile: Profile) {
     try {

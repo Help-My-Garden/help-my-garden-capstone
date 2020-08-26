@@ -12,7 +12,7 @@ export async function selectProfileByProfileId(profileId : string) {
         const mysqlConnection = await connect();
 
         // mysql prepared statement
-        const mySqlQuery = 'SELECT BIN_TO_UUID(profileId) as profileId, profileActivationToken, profileEmail, profileHash, profileUsername FROM profile WHERE profileId = UUID_TO_BIN(:profileId)'
+        const mySqlQuery = 'SELECT BIN_TO_UUID(profileId) as profileId, profileEmail, profileHash, profileName, profileActivationToken FROM profile WHERE profileId = UUID_TO_BIN(:profileId)'
 
         // return the rows from DB
         const [rows] =  await mysqlConnection.execute(mySqlQuery, {profileId})

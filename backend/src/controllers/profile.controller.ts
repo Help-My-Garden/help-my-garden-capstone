@@ -63,7 +63,7 @@ export async function putProfileController(request: Request, response: Response,
             profileActivationToken: null, // this won't get updated in mysql, but is needed to create this Profile object
             profileEmail,
             profileHash,
-            profileUsername
+            profileName
         }
 
         const result = await updateProfile(updatedProfile)

@@ -10,7 +10,7 @@ export async function selectAllProfiles() {
 
         const mysqlConnection = await connect();
 
-        const mySqlQuery = 'SELECT BIN_TO_UUID(profileId) as profileId, profileActivationToken, profileEmail, profileHash, profileUsername FROM profile'
+        const mySqlQuery = 'SELECT BIN_TO_UUID(profileId) as profileId, profileEmail, profileHash, profileName, profileActivationToken FROM profile'
 
         const [rows] =  await mysqlConnection.execute(mySqlQuery)
         return rows
