@@ -5,3 +5,5 @@ export const indexRoutes = Router()
 
 indexRoutes.route("/")
     .get(indexController)
+
+export default router;
