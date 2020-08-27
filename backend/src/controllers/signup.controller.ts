@@ -1,84 +1,65 @@
 import {Request, Response} from 'express';
-
-import { Profile } from '../../utils/interfaces/profile';
-import { Status } from '../../utils/interfaces/status';
-
-import { setActivationToken, setHash } from '../../utils/auth.utils';
-import { insertProfile } from "../../utils/profile/insertProfile";
-
+// DB
+import {setActivationToken, setHash} from '../../utils/auth.utils';
+import {Profile} from "../../utils/interfaces/Profile";
+import {Status} from "../../utils/interfaces/Status";
 import MailComposer from "nodemailer/lib/mail-composer";
-const mailgun = require("mailgun-js");
+import {insertProfile} from "../../utils/profile/insertProfile";
 
-/**
- * Handles POST request for new user Profile insertion
- *
- * @param request
- * @param response
- **/
-export async function signUpProfileController (request: Request, response: Response) {
+const mailgun = require("mailgun-js")
+
+// Interfaces (represent the DB model and types of the columns associated with a specific DB table)
+
+
+export async function signupProfileController(request: Request, response: Response) {
     try {
 
-        // grab the signup form data off of the request body
-        const {
-            signupEmail,
-            signupPassword,
-            signupUsername
-        } = request.body;
 
-        // hash the user's password and create the activation token
-        const profileHash = await setHash(signupPassword);
+        const {profileEmail, profileName, profilePassword} = request.body;
+        const profileHash = await setHash(profilePassword);
         const profileActivationToken = setActivationToken();
+        const basePath = `${request.protocol}://${request.get('host')}${request.originalUrl}activation/${profileActivationToken}`
+        console.log(profileActivationToken)
 
-        // create Profile object to be inserted
-        const profile : Profile = {
-            profileId: null,
-            profileActivationToken,
-            profileEmail: signupEmail,
-            profileHash,
-            profileUsername: signupUsername
-        };
+        const message = `<h2>Welcome to DDCTwitter.</h2>
+<p>In order to start posting tweets of cats you must confirm your account </p>
+<p><a href="${basePath}">${basePath}</a></p>
+`
 
-        // insert profile into mysql
-        const result = await insertProfile(profile);
-
-        // set base path for account activation link - development
-        // const basePath = `${request.protocol}://${request.get('host')}${request.originalUrl}activation/${profileActivationToken}`;
-
-        // base path for live deployment
-        const basePath = `${request.protocol}://${request.get('host')}/activation/${profileActivationToken}`;
-
-        // create a formatted message for the activation email
-        const message = `<h2>Welcome to Help My Garden!</h2>
-<p>In order to start saving plants you must confirm your account here:</p>
-<p><a href="${basePath}">${basePath}</a></p>`
-
-        // create mailgun message
         const mailgunMessage = {
             from: `Mailgun Sandbox <postmaster@${process.env.MAILGUN_DOMAIN}>`,
-            to: signupEmail,
-            subject: "Help My Garden Account Activation",
+            to: profileEmail,
+            subject: "One step closer to Sticky Head -- Account Activation",
             text: 'Test email text',
             html: message
         }
 
-        // build new mailgun email
+        const profile: Profile = {
+            profileId: null,
+            profileActivationToken,
+            profileEmail,
+            profileHash,
+            profileName
+        };
+
+        const result = await insertProfile(profile)
+
         const emailComposer: MailComposer = new MailComposer(mailgunMessage)
+
         emailComposer.compile().build((error: any, message: Buffer) => {
             const mg = mailgun({apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN});
 
             console.log(message.toString("ascii"))
-
             const compiledEmail = {
-                to: signupEmail,
+                to: profileEmail,
                 message: message.toString("ascii")
             }
 
             const status: Status = {
                 status: 200,
-                message: "Profile successfully created! Please check your email to activate your account.",
+                message: "Profile successfully created please check your email.",
                 data: null
             };
-
             mg.messages().sendMime(compiledEmail, (sendError: any, body: any) => {
                 if (sendError) {
                     console.log(sendError);
@@ -86,10 +67,12 @@ export async function signUpProfileController (request: Request, response: Respo
                 }
                 return response.json(status);
             });
+
+
         })
 
     } catch (error) {
-        const status : Status = {
+        const status: Status = {
             status: 400,
             message: error.message,
             data: null

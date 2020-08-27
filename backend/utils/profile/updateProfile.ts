@@ -1,5 +1,5 @@
 import {connect} from "../../src/database";
-import {Profile} from "../interfaces/profile";
+import {Profile} from "../interfaces/Profile";
 
 /**
  * Updates an existing profile. This method does not update the
