@@ -1,6 +1,6 @@
 export interface Plant{
     plantId : string|null,
-    platColor: string,
+    plantColor: string,
     plantCommonName: string,
     plantDuration: string,
     plantFamilyName: string,
