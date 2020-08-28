@@ -20,9 +20,10 @@ function dataDownloader() : Promise<any> {
 
                     let plant : Plant = {plantId: null, plantColor: mainSpecies.flower.color?.join(", ") ?? null, plantCommonName: currentPlant.common_name, plantDuration, plantFamilyName: currentPlant.family_common_name, plantImageUrl: currentPlant.image_url, plantScientificName: currentPlant.scientific_name, plantSize: `${mainSpecies.specifications.average_height.cm} cm`, plantSunlight: `${mainSpecies.growth.light} hours`}
 
-                    console.trace(plant)
+                    /*console.log(plant)*/
 
                 }
+                return dataArray
 
         } catch (error) {
             console.error(error)
