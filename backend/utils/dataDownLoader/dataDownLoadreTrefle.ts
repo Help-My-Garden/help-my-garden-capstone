@@ -1,5 +1,6 @@
 import axios from "axios"
 import {Plant} from "../interfaces/Plant";
+import {insertPlant} from "../plant/insertPlant";
 require('dotenv').config()
 
 
@@ -8,7 +9,11 @@ function dataDownloader() : Promise<any> {
 
     async function downloadPlants() {
         try {
-            const {data} = await axios.get(`https://trefle.io/api/v1/distributions/nwm/plants/?token=${process.env.API_KEY}`)
+            for (let i = 1; i <= 7; i++){
+                let page = i
+                console.log(i)
+
+                const {data} = await axios.get(`https://trefle.io/api/v1/distributions/nwm/plants/?token=${process.env.API_KEY}&page=${page}`)
 
             const dataArray = data.data
 
@@ -21,10 +26,10 @@ function dataDownloader() : Promise<any> {
                     let plant : Plant = {plantId: null, plantColor: mainSpecies.flower.color?.join(", ") ?? null, plantCommonName: currentPlant.common_name, plantDuration, plantFamilyName: currentPlant.family_common_name, plantImageUrl: currentPlant.image_url, plantScientificName: currentPlant.scientific_name, plantSize: `${mainSpecies.specifications.average_height.cm} cm`, plantSunlight: `${mainSpecies.growth.light} hours`}
 
                     /*console.log(plant)*/
+                    await insertPlant(plant)
 
                 }
-                return dataArray
-
+        }
         } catch (error) {
             console.error(error)
         }
