@@ -6,11 +6,11 @@ import morgan from 'morgan';
 
 // Routes
 import IndexRoutes from './routes/index.route';
-// import { SignInRouter } from './routes/sign-in.route';
+import { SignInRouter } from './routes/sign-in.route';
 import { passportMiddleware } from './lib/auth.controller';
 const session = require("express-session");
 import passport = require('passport');
-// import {SignOutRoute} from "./routes/sign-out.route";
+import {SignOutRoute} from "./routes/sign-out.route";
 const MemoryStore = require('memorystore')(session);
 import csrf from "csurf";
 
@@ -59,8 +59,8 @@ export class App {
     // private method for setting up routes in their basic sense (ie. any route that performs an action on profiles starts with /profiles)
     private routes () {
         this.app.use('/apis',IndexRoutes);
-        // this.app.use('/apis/sign-in', SignInRouter);
-        // this.app.use("/apis/sign-out", SignOutRoute);
+        this.app.use('/apis/sign-in', SignInRouter);
+        this.app.use("/apis/sign-out", SignOutRoute);
         this.app.use('/apis/sign-up', SignupRoute);
 
     }
