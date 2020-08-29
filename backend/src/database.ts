@@ -5,6 +5,7 @@ require('dotenv').config()
 // Database connection. Can use config from .env file (based on example.env) or the defaults
 
 export async function connect (): Promise<Pool> {
+
     const connection = await createPool({
         host: process.env.MYSQL_HOST,
         user: process.env.MYSQL_USER,
