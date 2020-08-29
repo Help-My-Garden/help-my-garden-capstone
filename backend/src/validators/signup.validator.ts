@@ -29,8 +29,8 @@ export const signupValidator = {
         escape: true,
         trim: true,
         isLength: {
-            errorMessage: 'profileAtHandle must be between seven and thirty two characters',
-            options: {min: 7, max: 32}
+            errorMessage: 'profileAtHandle must be between one and sixty four characters',
+            options: {min: 1, max: 64}
         }
     }
 }

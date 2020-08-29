@@ -4,10 +4,10 @@ import {Profile} from "../interfaces/Profile";
 export async function insertProfile(profile: Profile) {
     try {
         const mysqlConnection = await connect();
-        const query : string = 'INSERT INTO profile(profileId, profileEmail, profileHash, profileName, profileActivationToken ) VALUES (UUID_TO_BIN(UUID()) , :profileEmail, :profileName, :profileHash, :profileActivationToken)';
+        const query : string = 'INSERT INTO profile(profileId, profileActivationToken, profileEmail, profileHash, profileName ) VALUES (UUID_TO_BIN(UUID()) , :profileActivationToken, :profileEmail, :profileHash, :profileName)';
 
         const [rows] = await mysqlConnection.execute(query, profile);
-        return 'Profile Successfully Created'
+        return 'Congratulations your profile was successfully created'
     } catch (e) {
         console.error(e)
         return null
