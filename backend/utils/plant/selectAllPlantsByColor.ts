@@ -1,11 +1,11 @@
 import {connect} from "../../src/database";
 import {Plant} from "../interfaces/Plant"
 
-export async function selectAllPlantDuration(plantDuration: string) {
+export async function selectAllPlantsByColor(plantColor: string) {
     try {
         const mysqlConnection = await connect();
 
-        const [rows] = await mysqlConnection.execute('SELECT BIN_TO_UUID(plantId) as plantId, plantColor, plantCommonName, plantDuration, plantFamilyName, plantImageUrl, plantScientificName, plantSize, plantSunlight FROM plant WHERE plantDuration = :plantDuration', {plantDuration:});
+        const [rows] = await mysqlConnection.execute('SELECT BIN_TO_UUID(plantId) as plantId, plantColor, plantCommonName, plantDuration, plantFamilyName, plantImageUrl, plantScientificName, plantSize, plantSunlight FROM plant WHERE plantColor = :plantColor', {plantColor:});
         console.log(rows)
         // @ts-ignore is required so that rows can be interacted with like the array it is
         return rows.length !== 0 ? {...rows[0]} : undefined;
