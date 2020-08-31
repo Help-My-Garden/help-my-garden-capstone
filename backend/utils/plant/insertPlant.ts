@@ -8,6 +8,8 @@ export async function insertPlant (plant : Plant) {
         const mySqlQuery = "INSERT INTO plant (plantId, plantColor , plantCommonName, plantDuration, plantFamilyName, plantImageUrl, plantScientificName, plantSize, plantSunlight) VALUES (UUID_TO_BIN(UUID()), :plantColor, :plantCommonName, :plantDuration, :plantFamilyName, :plantImageUrl, :plantScientificName, :plantSize, :plantSunlight)";
 
         const [rows] = await mySqlConnection.execute(mySqlQuery, plant)
+
+        mySqlConnection.end()
         return "Plant successfully inserted"
     } catch (error) {
         console.log(error)
