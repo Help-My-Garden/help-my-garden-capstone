@@ -4,9 +4,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import {BrowserRouter} from "react-router-dom";
 import {Route, Switch} from "react-router";
 import {Home} from "./ui/Home";
-import {SearchPage} from "./ui/SearchPage";
-import {Info} from "./ui/Info";
-import {MyListCom} from "./ui/MyList";
+import {AllPlants} from "./ui/AllPlants";
+import {Plant} from "./ui/Plant";
+import {MyPlantList} from "./ui/MyPlantList";
 import {AboutUs} from './ui/AboutUs'
 import {FourOhFour} from "./ui/FourOhFour";
 
@@ -15,11 +15,11 @@ function Routing (){
 	<>
 		<BrowserRouter>
 			<Switch>
-				<Route exact path="/" component={Home}/>
-				<Route exact path="/search" component={SearchPage}/>
-				<Route exact path="/info" component={Info}/>
-				<Route exact path="/my-list" component={MyListCom}/>
+				<Route exact path="/plant/:plantId" component={Plant}/>
+				<Route exact path="/my-plant-list/:profileId" component={MyPlantList}/>
+				<Route exact path="/all-plants" component={AllPlants}/>
 				<Route exact path="/about-us" component={AboutUs}/>
+				<Route exact path="/" component={Home}/>
 				<Route component={FourOhFour}/>
 			</Switch>
 		</BrowserRouter>

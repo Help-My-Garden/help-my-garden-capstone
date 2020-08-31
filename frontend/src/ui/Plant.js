@@ -6,7 +6,7 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import image from "./shared/world-logo-black.png";
 
-export const Info = () => (
+export const Plant = () => (
   <>
     <Navbar className="row fluid navbar-dark" collapseOnSelect expand="md" style={{
       backgroundColor: "black",

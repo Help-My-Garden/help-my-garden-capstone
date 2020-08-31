@@ -1,4 +1,5 @@
 import {connect} from "../../src/database";
+
 import {Profile} from "../interfaces/Profile";
 
 export async function selectProfileByProfileActivationToken(profileActivationToken: string) {

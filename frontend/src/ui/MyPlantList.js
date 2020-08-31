@@ -5,7 +5,7 @@ import image from "./shared/world-logo-black.png";
 import Nav from "react-bootstrap/Nav";
 import {MyListCard} from "./MyListCard";
 
-export const MyListCom = () =>{
+export const MyPlantList = () =>{
 	return(
 		<>
 			<Navbar className="row fluid navbar-dark" collapseOnSelect expand="md" style={{
