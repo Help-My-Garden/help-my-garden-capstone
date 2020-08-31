@@ -13,6 +13,7 @@ import passport = require('passport');
 import {SignOutRoute} from "./routes/sign-out.route";
 const MemoryStore = require('memorystore')(session);
 import csrf from "csurf";
+import {PlantRoute} from "./routes/plant.route";
 
 
 // The following class creates the frontend and instantiates the server
