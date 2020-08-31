@@ -60,8 +60,9 @@ export class App {
     private routes () {
         this.app.use('/apis',IndexRoutes);
         this.app.use('/apis/sign-in', SignInRouter);
-        this.app.use("/apis/sign-out", SignOutRoute);
+        this.app.use('/apis/sign-out', SignOutRoute);
         this.app.use('/apis/sign-up', SignupRoute);
+        this.app.use('/apis/plant', PlantRoute);
 
     }
 
