@@ -1,16 +1,11 @@
 import {Request, Response} from "express";
-
-import {Plant} from "../../utils/interfaces/Plant";
-
-const {validationResult} = require('express-validator');
+import {Status} from "../../utils/interfaces/Status";
+import {selectAllPlants} from "../../utils/plant/selectAllPlants";
 
 export async function getPlantsController(request: Request, response: Response) {
 
     try {
-
-        const plant: Plant | string = request.session?.profile ?? "No user signed in";
-
-        const data = await selectAllTweets()
+        const data = await selectAllPlants()
         // return the response
         const status: Status = {status: 200, message: null, data};
         return response.json(status);
@@ -18,3 +13,4 @@ export async function getPlantsController(request: Request, response: Response) 
         console.log(error);
     }
 }
+
