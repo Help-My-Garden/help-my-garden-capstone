@@ -9,7 +9,7 @@ export function ContentCardsCom() {
 			<div className = "row" >
 				<div className = "col-md-6" >
 					<div className = "row" >
-						<a href = "/info" >
+						<a href = "/plant" >
 							<div className = "col-md-6" >
 
 								<p style = {{
@@ -40,7 +40,7 @@ export function ContentCardsCom() {
 				</div >
 				<div className = "col-md-6" >
 					<div className = "row" >
-						<a href = "/info" >
+						<a href = "/plant" >
 							<div className = "col-md-6" >
 
 								<p style = {{

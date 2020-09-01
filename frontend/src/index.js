@@ -15,8 +15,8 @@ function Routing (){
 	<>
 		<BrowserRouter>
 			<Switch>
-				<Route exact path="/plant/:plantId" component={Plant}/>
-				<Route exact path="/my-plant-list/:profileId" component={MyPlantList}/>
+				<Route exact path="/plant" component={Plant}/>
+				<Route exact path="/my-plant-list" component={MyPlantList}/>
 				<Route exact path="/all-plants" component={AllPlants}/>
 				<Route exact path="/about-us" component={AboutUs}/>
 				<Route exact path="/" component={Home}/>

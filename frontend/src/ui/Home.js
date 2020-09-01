@@ -25,7 +25,7 @@ export const Home = () => {
 			extra attention to featured content or information.
 			</p>
 			<p>
-			<Button variant="primary">Learn more</Button>
+			<Button href="/all-plants" variant="primary">Learn more</Button>
 			</p>
 			</Jumbotron>
 			<Carousel className="container">

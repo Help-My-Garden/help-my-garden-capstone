@@ -11,7 +11,9 @@ export const Plant = () => (
     <Navbar className="row fluid navbar-dark" collapseOnSelect expand="md" style={{
       backgroundColor: "black",
     }}>
+      <a href = "/" >
       <img src = {image} alt = "Help My Garden logo" width="100"/>
+      </a >
       <Navbar.Brand href="/" style={{color: "white",}}>Help My Garden</Navbar.Brand>
       <Navbar.Toggle className="ml-auto" aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
