@@ -12,14 +12,14 @@ export const Plant = () => (
       backgroundColor: "black",
     }}>
       <img src = {image} alt = "Help My Garden logo" width="100"/>
-      <Navbar.Brand style={{color: "white",}}>Help My Garden</Navbar.Brand>
+      <Navbar.Brand href="/" style={{color: "white",}}>Help My Garden</Navbar.Brand>
       <Navbar.Toggle className="ml-auto" aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Link href="/" style={{color: "white",}}>Home</Nav.Link>
-          <Nav.Link href="/search" style={{color: "white",}}>Search</Nav.Link>
+          <Nav.Link href="/all-plants" style={{color: "white",}}>Search</Nav.Link>
           <NavDropdown title="Account " id="collapsible-nav-dropdown">
-            <NavDropdown.Item href="/my-list">My list</NavDropdown.Item>
+            <NavDropdown.Item href="/my-plant-list">My list</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
