@@ -1,7 +1,7 @@
 import {connect} from "../../src/database";
 import {Plant} from "../interfaces/Plant"
 
-export async function selectAllPlantFamilyName(plantFamilyName: string) {
+export async function selectAllPlantsFamilyName(plantFamilyName: string) {
     try {
         const mysqlConnection = await connect();
 

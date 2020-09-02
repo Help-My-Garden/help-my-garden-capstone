@@ -16,7 +16,7 @@
 //  *
 //  * @param request
 //  * @param response
-//  * @param nextFunction
+//  * @param nextFunctionz
 //  **/
 // export async function putProfileController(request: Request, response: Response, nextFunction: NextFunction) {
 //     try {

@@ -9,7 +9,7 @@ function dataDownloader() : Promise<any> {
 
     async function downloadPlants() {
         try {
-            for (let i = 8; i <= 165; i++){
+            for (let i = 1; i <= 165; i++){
                 let page = i
                 console.log(i)
 

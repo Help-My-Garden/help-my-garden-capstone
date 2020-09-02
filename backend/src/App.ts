@@ -13,7 +13,7 @@ import passport = require('passport');
 import {SignOutRoute} from "./routes/sign-out.route";
 const MemoryStore = require('memorystore')(session);
 import csrf from "csurf";
-import {PlantRoute} from "./routes/plant.route";
+import {PlantRouter} from "./routes/allPlants.route";
 
 
 // The following class creates the frontend and instantiates the server
@@ -63,7 +63,7 @@ export class App {
         this.app.use('/apis/sign-in', SignInRouter);
         this.app.use('/apis/sign-out', SignOutRoute);
         this.app.use('/apis/sign-up', SignupRoute);
-        this.app.use('/apis/plant', PlantRoute);
+        this.app.use('/apis/plants', PlantRouter);
 
     }
 
