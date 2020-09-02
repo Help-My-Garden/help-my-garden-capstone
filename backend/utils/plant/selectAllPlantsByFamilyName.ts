@@ -1,5 +1,4 @@
 import {connect} from "../../src/database";
-import {Plant} from "../interfaces/Plant"
 
 export async function selectAllPlantsFamilyName(plantFamilyName: string) {
     try {

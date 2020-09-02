@@ -6,6 +6,7 @@ import {selectAllPlantsByDuration} from "../../utils/plant/selectAllPlantsByDura
 import {selectAllPlantsByCommonName} from "../../utils/plant/selectAllPlantsByCommonName";
 import {selectAllPlantsById} from "../../utils/plant/selectAllPlantsById";
 import {selectAllPlantsFamilyName} from "../../utils/plant/selectAllPlantsByFamilyName";
+import {selectAllPlantsByScientificName} from "../../utils/plant/selectAllPlantsByScientificName";
 
 export async function getPlantsController(request: Request, response: Response): Promise<Response | void>{
 
@@ -55,7 +56,7 @@ export async function getPlantsByDurationController(request: Request, response: 
 }
 
 
-export async function getPlantsByFamilyNameController(request: Request, response: Response){
+export async function getPlantsByFamilyNameController(request: Request, response: Response, nextFunction: NextFunction){
     try {
         const {plantFamilyName} = request.params
         const data = await selectAllPlantsFamilyName(plantFamilyName)
@@ -67,10 +68,21 @@ export async function getPlantsByFamilyNameController(request: Request, response
 }
 
 
-export async function getPlantsByIdController(request: Request, response: Response){
+export async function getPlantsByIdController(request: Request, response: Response, nextFunction: NextFunction){
     try {
         const {plantId} = request.params
         const data = await selectAllPlantsById(plantId)
+        // return the response
+        return response.json({status: 200, message: null, data});
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export async function getPlantsByScientificNameController(request: Request, response: Response){
+    try {
+        const {plantScientificName} = request.params
+        const data = await selectAllPlantsByScientificName(plantScientificName)
         // return the response
         return response.json({status: 200, message: null, data});
     } catch (error) {

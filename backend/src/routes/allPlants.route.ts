@@ -1,12 +1,12 @@
 import {Router} from "express";
 import {getPlantsController} from "../controllers/plant.controller";
 
-export const PlantRouter = Router();
+const AllPlantsRouter = Router();
 
 /*add plant info route for inner join*/
-PlantRouter.route("/plantProfileId/:plantProfileId").get(getPlantsController)
+AllPlantsRouter.route("/plantProfileId/:plantProfileId").get(getPlantsController)
 
-PlantRouter.route('/')
+AllPlantsRouter.route('/')
     .get(getPlantsController)
 
-export default PlantRouter;
+export default AllPlantsRouter;

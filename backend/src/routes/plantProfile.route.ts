@@ -1,4 +1,9 @@
 import {getPlantsController} from "../controllers/plant.controller";
-import PlantRouter from "./allPlants.route";
+import {Router} from "express";
 
-PlantRouter.route("/plantProfileId/:plantProfileId").get(getPlantsController)
+const plantProfileIdRouter = Router();
+
+plantProfileIdRouter.route("/plantProfileId/:plantProfileId")
+    .get(getPlantsController)
+
+export default plantProfileIdRouter
