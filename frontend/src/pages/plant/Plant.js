@@ -1,10 +1,10 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.css';
-import {JumbotronInfo} from "./JumbotronInfo";
+import {JumbotronInfo} from "../../shared/components/plant-jumbo/JumbotronInfo";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import image from "./shared/world-logo-black.png";
+import image from "../../ui/sharedimg/world-logo-black.png";
 
 export const Plant = () => (
   <>

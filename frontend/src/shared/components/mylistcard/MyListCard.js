@@ -1,4 +1,4 @@
-import image from "./shared/world-logo-black.png";
+import image from "../../../ui/sharedimg/world-logo-black.png";
 import React from "react";
 
 export function MyListCard () {

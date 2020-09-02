@@ -6,7 +6,7 @@ import {faGithub} from "@fortawesome/free-brands-svg-icons/faGithub";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons/faLinkedin";
 import Nav from "react-bootstrap/Nav";
-import image from "./shared/world-logo-black.png"
+import image from "../../ui/sharedimg/world-logo-black.png"
 
 
 export const AboutUs = (props) => {
