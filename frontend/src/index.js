@@ -9,21 +9,38 @@ import {Plant} from "./pages/plant/Plant";
 import {MyPlantList} from "./pages/myplantlist/MyPlantList";
 import {AboutUs} from './pages/aboutus/AboutUs'
 import {FourOhFour} from "./pages/fourohfour/FourOhFour";
+import {Provider} from "react-redux";
+import {applyMiddleware} from "redux";
+import thunk from "redux-thunk";
+import {configureStore} from "@reduxjs/toolkit";
+// import 'bootstrap/dist/js/bootstrap.bundle.min';
+import reducer from './store/index'
 
-function Routing (){
-	return(
+const store = configureStore({reducer});
+
+library.add(faStroopwafel, faEnvelope, faKey, faDove, faPhone, faPencilAlt);
+
+
+
+
+
+const Routing = (store) => (
 	<>
-		<BrowserRouter>
-			<Switch>
-				<Route exact path="/plant" component={Plant}/>
-				<Route exact path="/my-plant-list" component={MyPlantList}/>
-				<Route exact path="/all-plants" component={AllPlants}/>
-				<Route exact path="/about-us" component={AboutUs}/>
-				<Route exact path="/" component={Home}/>
-				<Route component={FourOhFour}/>
-			</Switch>
-		</BrowserRouter>
+		<Provider store={store}>
+			<BrowserRouter>
+				<Navbar/>
+				<Switch>
+					<Route exact path="/plant" component={Plant}/>
+					<Route exact path="/my-plant-list" component={MyPlantList}/>
+					<Route exact path="/all-plants" component={AllPlants}/>
+					<Route exact path="/about-us" component={AboutUs}/>
+					<Route exact path="/" component={Home}/>
+					<Route component={FourOhFour}/>
+				</Switch>
+			</BrowserRouter>
+		</Provider>
 	</>
-	)
-}
-ReactDOM.render(<Routing/>, document.querySelector('#root'));
+);
+
+
+ReactDOM.render(Routing(store) , document.querySelector("#root"));
