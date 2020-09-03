@@ -3,7 +3,7 @@ import {getPlantsByDurationController} from "../controllers/plant.controller";
 
 const plantsByDurationRouter = Router();
 
-plantsByDurationRouter.route("/")
+plantsByDurationRouter.route("/:plantDuration")
  .get(getPlantsByDurationController)
 
 export default plantsByDurationRouter;

@@ -3,7 +3,7 @@ import {getPlantsByCommonNameController} from "../controllers/plant.controller";
 
 const plantsByCommonNameRouter = Router ();
 
-plantsByCommonNameRouter.route("/")
+plantsByCommonNameRouter.route("/:plantCommonName")
     .get(getPlantsByCommonNameController)
 
 export default plantsByCommonNameRouter;

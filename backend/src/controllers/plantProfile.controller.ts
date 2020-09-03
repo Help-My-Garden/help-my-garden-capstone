@@ -1,18 +1,42 @@
-import {Request, Response} from "express";
-import {Status} from "../../utils/interfaces/Status";
-import {selectAllPlantsByPlantProfileId} from "../../utils/plant/selectAllPlantsByPlantProfileId";
+import {Request, Response} from 'express';
 
-export async function selectPlantsByPlantProfileId(request: Request, response: Response): Promise<Response | void> {
+// DB
 
+// Interfaces (represent the DB model and types of the columns associated with a specific DB table)
+import {Status} from '../../utils/interfaces/Status';
+import {Profile} from "../../utils/interfaces/Profile";
+import {Plant} from "../../utils/interfaces/Plant";
+
+const {validationResult} = require('express-validator');
+
+export async function togglePlantProfileController(request: Request, response: Response) {
 
     try {
+        validationResult(request).throw();
 
-        const profileId : string = <string> request.session?.profile ?? "No user signed in";
+        const {plantProfilePlantId} = request.body;
+        const profile: Profile = request.session?.profile
+        const plantProfileProfileId = <string>profile.profileId
 
-        const data = await selectAllPlantsByPlantProfileId(profileId)
-        // return the response
-        const status: Status = {status: 200, message: null, data};
+        const plant: Plant = {
+            plantProfileProfileId,
+            plantProfilePlantId,
+        }
+        const select = await selectPlant(plant)
+        // @ts-ignore
+        if (select[0]){
+            const result = await deletePlant(plant)
+        }else{
+            const result = await insertPlant(plant)
+        }
+
+        const status: Status = {
+            status: 200,
+            message: 'Like successfully updated',
+            data: null
+        };
         return response.json(status);
+
     } catch(error) {
         console.log(error);
     }

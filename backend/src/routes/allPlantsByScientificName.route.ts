@@ -3,7 +3,7 @@ import {getPlantsByScientificNameController} from "../controllers/plant.controll
 
 const plantsByScientificNameRouter = Router();
 
-plantsByScientificNameRouter.route("/")
+plantsByScientificNameRouter.route("/:plantScientificName")
     .get(getPlantsByScientificNameController)
 
 export default plantsByScientificNameRouter;

@@ -3,7 +3,7 @@ import {getPlantsByColorController} from "../controllers/plant.controller";
 
 const plantsByColorRouter = Router();
 
-plantsByColorRouter.route("/")
+plantsByColorRouter.route("/:plantColor")
     .get(getPlantsByColorController)
 
 export default plantsByColorRouter;

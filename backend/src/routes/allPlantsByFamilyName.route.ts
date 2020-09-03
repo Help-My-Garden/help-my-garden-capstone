@@ -3,7 +3,7 @@ import {getPlantsByFamilyNameController} from "../controllers/plant.controller";
 
 const plantsByFamilyNameRouter = Router();
 
-plantsByFamilyNameRouter.route("/")
+plantsByFamilyNameRouter.route("/:plantFamilyName")
     .get(getPlantsByFamilyNameController)
 
 export default plantsByFamilyNameRouter;
