@@ -14,7 +14,7 @@ const slice = createSlice({
 export const {getAllPlants} = slice.actions
 
 export const fetchAllPlants = () => async (dispatch) => {
-  const {data} =  await httpConfig.get("/apis/plant/");
+  const {data} =  await httpConfig.get("/apis/plants/");
   dispatch(getAllPlants(data));
 };
 

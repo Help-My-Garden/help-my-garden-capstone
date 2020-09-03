@@ -32,7 +32,7 @@ const Routing = (store) => (
 	<>
 		<Provider store={store}>
 			<BrowserRouter>
-				<NavbarCom/>
+
 				<Switch>
 					<Route exact path="/plant" component={Plant}/>
 					<Route exact path="/my-plant-list" component={MyPlantList}/>
