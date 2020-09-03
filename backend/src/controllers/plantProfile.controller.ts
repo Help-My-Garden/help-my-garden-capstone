@@ -35,7 +35,7 @@ export async function togglePlantProfileController(request: Request, response: R
 
         const status: Status = {
             status: 200,
-            message: 'Like successfully updated',
+            message: 'Plant successfully saved',
             data: null
         };
         return response.json(status);

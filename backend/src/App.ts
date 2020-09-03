@@ -20,6 +20,7 @@ import plantsByDurationRouter from "./routes/allPlantsByDuration.route";
 import plantsByFamilyNameRouter from "./routes/allPlantsByFamilyName.route";
 import plantsByIdRouter from "./routes/allPlantsById.route";
 import plantsByScientificNameRouter from "./routes/allPlantsByScientificName.route";
+import plantProfileIdRouter from "./routes/plantProfile.route";
 
 
 // The following class creates the frontend and instantiates the server
@@ -76,6 +77,7 @@ export class App {
         this.app.use('/apis/plant-family-name', plantsByFamilyNameRouter)
         this.app.use('/apis/plantId', plantsByIdRouter)
         this.app.use('/apis/plant-scientific-name', plantsByScientificNameRouter)
+        this.app.use('/apis/plantProfile', plantProfileIdRouter)
     }
 
     // starts the server and tells the terminal to post a message that the server is running and on what port
