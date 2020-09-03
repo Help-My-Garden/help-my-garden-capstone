@@ -1,15 +1,13 @@
-import {connect} from "../../src/database";
-import {Plant} from "../interfaces/Plant";
+/*import {connect} from "../../src/database";
+import {PlantProfile} from "../interfaces/PlantProfile";
 
-export async function togglePlantProfile(plant: Plant) {
+export async function togglePlantProfile(plantProfile: PlantProfile) {
     try {
-        console.log('save', plant)
+        console.log('save', plantProfile)
         const mysqlConnection = await connect();
         const mySqlSelectQuery = 'SELECT BIN_TO_UUID(plantProfileProfileId) as plantProfileProfileId, BIN_TO_UUID(plantProfilePlantId) as plantProfilePlantId FROM plantProfile WHERE plantProfileProfileId = UUID_TO_BIN(:plantProfileProfileId) AND plantProfilePlantId = UUID_TO_BIN(:plantProfilePlantId)'
-        // const mySqlSelectQuery = 'SELECT EXISTS (SELECT * FROM `like` WHERE likeProfileId = UUID_TO_BIN(:likeProfileId) AND likeTweetId = UUID_TO_BIN(:likeTweetId))'
-        // const mySqlSelectQuery = 'SELECT COUNT(*) FROM `like` WHERE likeProfileId = UUID_TO_BIN(:likeProfileId) AND likeTweetId = UUID_TO_BIN(:likeTweetId))'
 
-        const [SaveRows] = await mysqlConnection.execute(mySqlSelectQuery, plant)
+        const [SaveRows] = await mysqlConnection.execute(mySqlSelectQuery, plantProfile)
         // @ts-ignore
         console.log('saveRows', saveRows)
         // @ts-ignore
@@ -17,7 +15,7 @@ export async function togglePlantProfile(plant: Plant) {
 
             const mySqlConnection = await connect()
             const mySqlDelete = 'DELETE FROM `like` WHERE likeProfileId = UUID_TO_BIN(:likeProfileId) AND likeTweetId = UUID_TO_BIN(:likeTweetId)'
-            const [deleteRows] = await mySqlConnection.execute(mySqlDelete, plant)
+            const [deleteRows] = await mySqlConnection.execute(mySqlDelete, plantProfile)
             console.log('PLANT REMOVED')
 
 
@@ -27,7 +25,7 @@ export async function togglePlantProfile(plant: Plant) {
             const mySqlConnection = await connect()
             const mySqlQuery = "INSERT INTO `like`(likeProfileId, likeTweetId, likeDate) VALUES(UUID_TO_BIN(:likeProfileId), UUID_TO_BIN(:likeTweetId), NOW())";
 
-            const [rows] = await mySqlConnection.execute(mySqlQuery, plant)
+            const [rows] = await mySqlConnection.execute(mySqlQuery, plantProfile)
             console.log('PLANT ADDED')
 
         }
@@ -37,4 +35,4 @@ export async function togglePlantProfile(plant: Plant) {
     } catch (error) {
         console.log(error)
     }
-}
+}*/

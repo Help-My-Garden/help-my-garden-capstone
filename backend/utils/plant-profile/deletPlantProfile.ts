@@ -1,11 +1,11 @@
 import {connect} from "../../src/database";
-import {Plant} from "../interfaces/Plant";
+import {PlantProfile} from "../interfaces/PlantProfile";
 
-export async function deletePlant(plant: Plant) {
+export async function deletePlantProfile(plantProfile: PlantProfile) {
     try {
         const mySqlConnection = await connect()
         const mySqlDelete = 'DELETE FROM plantProfile WHERE plantProfileProfileId = UUID_TO_BIN(:plantProfileProfileId) AND plantProfilrPlantId = UUID_TO_BIN(:plantProfilePlantId)'
-        const [rows] = await mySqlConnection.execute(mySqlDelete, plant)
+        const [rows] = await mySqlConnection.execute(mySqlDelete, plantProfile)
         return "Plant successfully deleted"
     } catch(error) {
         console.log(error)

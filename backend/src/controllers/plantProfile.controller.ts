@@ -5,7 +5,10 @@ import {Request, Response} from 'express';
 // Interfaces (represent the DB model and types of the columns associated with a specific DB table)
 import {Status} from '../../utils/interfaces/Status';
 import {Profile} from "../../utils/interfaces/Profile";
-import {Plant} from "../../utils/interfaces/Plant";
+import {PlantProfile} from "../../utils/interfaces/PlantProfile";
+import {deletePlantProfile} from "../../utils/plant-profile/deletPlantProfile";
+import {insertPlantProfile} from "../../utils/plant-profile/insertPlantProfile";
+import {selectPlantProfile} from "../../utils/plant-profile/selectPlantProfile";
 
 const {validationResult} = require('express-validator');
 
@@ -18,16 +21,16 @@ export async function togglePlantProfileController(request: Request, response: R
         const profile: Profile = request.session?.profile
         const plantProfileProfileId = <string>profile.profileId
 
-        const plant: Plant = {
+        const plantProfile: PlantProfile = {
             plantProfileProfileId,
             plantProfilePlantId,
         }
-        const select = await selectPlant(plant)
+        const select = await selectPlantProfile(plantProfile)
         // @ts-ignore
         if (select[0]){
-            const result = await deletePlant(plant)
+            const result = await deletePlantProfile(plantProfile)
         }else{
-            const result = await insertPlant(plant)
+            const result = await insertPlantProfile(plantProfile)
         }
 
         const status: Status = {

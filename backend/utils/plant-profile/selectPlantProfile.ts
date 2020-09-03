@@ -1,11 +1,11 @@
 import {connect} from "../../src/database";
-import {Plant} from "../interfaces/Plant";
+import {PlantProfile} from "../interfaces/PlantProfile";
 
-export async function selectPlant(plant: Plant) {
+export async function selectPlantProfile(plantProfile: PlantProfile) {
     try {
         const mysqlConnection = await connect();
         const mySqlSelectQuery = 'SELECT BIN_TO_UUID(plantProfileProfileId) as plantProfileProfileId, BIN_TO_UUID(plantProfilePlantId) as plantProfilePlantId FROM plantProfile WHERE plantProfileProfileId = UUID_TO_BIN(:plantProfileProfileId) AND plantProfilePlantId = UUID_TO_BIN(:plantProfilePlantId)'
-        const [rows] = await mysqlConnection.execute(mySqlSelectQuery, plant)
+        const [rows] = await mysqlConnection.execute(mySqlSelectQuery, plantProfile)
         return rows;
 
     } catch(error) {
