@@ -3,6 +3,6 @@ import plantReducer from './plantReducer'
 import authReducer from "./authReducer";
 
 export const combinedReducers = combineReducers({
-  tweets: tweetReducer,
+  plants: plantReducer,
   auth: authReducer,
 });
