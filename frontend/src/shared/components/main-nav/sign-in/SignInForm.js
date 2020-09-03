@@ -3,8 +3,8 @@ import {httpConfig} from "../../../utils/http-config";
 import {Formik} from "formik";
 import * as Yup from "yup";
 import {SignInFormContent} from "./SignInFormContent";
-import {getAuth} from "../../../actions/auth";
 import {useDispatch} from "react-redux";
+import { getAuth } from '../../../../store/auth'
 
 
 

@@ -6,6 +6,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import image from "../../../ui/sharedimg/world-logo-black.png"
 import {useState} from "react";
+import { SignInForm } from './sign-in/SignInForm'
 
 
 
@@ -48,21 +49,7 @@ export function NavbarCom () {
 						<Modal.Title>Log In</Modal.Title>
 					</Modal.Header>
 					<Modal.Body>
-						<form action = "./apis/" >
-							<div className = "information" >
-								<label className = "form-label" >User Name
-									<input className = "form-control col-md-12" type = "text" name = "user-name" id = "userName"
-												 placeholder = "User Name" />
-								</label >
-							</div >
-							<div className = "information" >
-								<label className = "form-label" >Password
-									<input className = "form-control col-md-12" type = "password" name = "password" id = "password"
-												 placeholder = "Password" />
-								</label >
-							</div >
-						</form >
-						<div className = "g-recaptcha" data-sitekey = "6LcHZG0UAAAAAHCSdqZNJATJ1VNMjUxf4sm4jOlM" ></div >
+						< SignInForm />
 						<Button variant="primary" onClick={handleClose}>
 							Log In
 						</Button>
