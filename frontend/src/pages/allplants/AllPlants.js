@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import 'bootstrap/dist/css/bootstrap.css';
 import {SearchCom} from "../../shared/components/plant-catagory-selector/Search";
 import {ContentCardsCom} from "../../shared/components/allplantscard/ContentCards";
@@ -6,10 +6,20 @@ import Navbar from "react-bootstrap/Navbar";
 import image from "../../ui/sharedimg/world-logo-black.png";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchAllPlants } from '../../store/plants'
 
 
 export const AllPlants = () => {
 
+	const plants = useSelector(state => state.plants ? state.plants : []);
+	const dispatch = useDispatch();
+	const effects = () => {
+		dispatch(fetchAllPlants());
+	};
+	const inputs = [];
+	useEffect(effects, inputs);
+ console.log(plants)
 	return (
 		<>
 			<div className="container-fluid" style={{
@@ -32,11 +42,11 @@ export const AllPlants = () => {
 				</Navbar>
 			</div>
 			<SearchCom/>
-			<section className="container" style={{
-				backgroundColor: "grey",
-				margin: "2rem auto 1rem auto",
-				padding: "1rem",
-			}}>
+				<section className="container" style={{
+					backgroundColor: "grey",
+					margin: "2rem auto 1rem auto",
+					padding: "1rem",
+				}}>
 				<ContentCardsCom/>
 			</section>
 		</>

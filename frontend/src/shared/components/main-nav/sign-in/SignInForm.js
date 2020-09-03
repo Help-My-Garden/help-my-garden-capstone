@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import {SignInFormContent} from "./SignInFormContent";
 import {useDispatch} from "react-redux";
 import { getAuth } from '../../../../store/auth'
+import * as jwtDecode from 'jwt-decode'
 
 
 
@@ -37,7 +38,8 @@ export const SignInForm = () => {
           window.localStorage.removeItem("authorization");
           window.localStorage.setItem("authorization", reply.headers["authorization"]);
           resetForm();
-          dispatch(getAuth())
+          const jwt= jwtDecode(reply.headers["authorization"])
+          dispatch(getAuth(jwt))
           // window.location = "/";
         }
         setStatus({message, type});

@@ -13,7 +13,7 @@ const slice = createSlice({
 
 export const {getAllPlants} = slice.actions
 
-export const fetchAllTweets = () => async (dispatch) => {
+export const fetchAllPlants = () => async (dispatch) => {
   const {data} =  await httpConfig.get("/apis/plant/");
   dispatch(getAllPlants(data));
 };
