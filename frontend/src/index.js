@@ -10,11 +10,15 @@ import {MyPlantList} from "./pages/myplantlist/MyPlantList";
 import {AboutUs} from './pages/aboutus/AboutUs'
 import {FourOhFour} from "./pages/fourohfour/FourOhFour";
 import {Provider} from "react-redux";
-import {applyMiddleware} from "redux";
-import thunk from "redux-thunk";
+// import {applyMiddleware} from "redux";
+// import thunk from "redux-thunk";
 import {configureStore} from "@reduxjs/toolkit";
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
+import {faDove, faEnvelope, faKey, faPencilAlt, faPhone, faStroopwafel} from '@fortawesome/free-solid-svg-icons'
+
 import reducer from './store/index'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import {NavbarCom} from './shared/components/main-nav/Navbar'
 
 const store = configureStore({reducer});
 
@@ -28,7 +32,7 @@ const Routing = (store) => (
 	<>
 		<Provider store={store}>
 			<BrowserRouter>
-				<Navbar/>
+				<NavbarCom/>
 				<Switch>
 					<Route exact path="/plant" component={Plant}/>
 					<Route exact path="/my-plant-list" component={MyPlantList}/>
