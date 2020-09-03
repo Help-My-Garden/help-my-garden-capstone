@@ -1,4 +1,5 @@
-import React from "react"
+import React, {useEffect} from 'react';
+import {useSelector, useDispatch} from "react-redux";
 import 'bootstrap/dist/css/bootstrap.css';
 import {NavbarCom} from "../../shared/components/main-nav/Navbar";
 import Jumbotron from "react-bootstrap/cjs/Jumbotron";
