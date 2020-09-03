@@ -16,14 +16,14 @@ create table profile (
 
 create table plant (
     plantId BINARY(16) not null,
-    plantFamilyName VARCHAR(128) not null,
-    plantCommonName VARCHAR(128) not null,
+    plantFamilyName VARCHAR(128),
+    plantCommonName VARCHAR(128),
     plantScientificName VARCHAR(128) not null,
-    plantColor VARCHAR(128) not null,
-    plantImageUrl VARCHAR(128) not null,
-    plantDuration VARCHAR(300) not null,
-    plantSunlight VARCHAR(128) not null,
-    plantSize VARCHAR(128) not null,
+    plantColor VARCHAR(128),
+    plantImageUrl VARCHAR(128),
+    plantDuration VARCHAR(300),
+    plantSunlight VARCHAR(128),
+    plantSize VARCHAR(128),
     primary key (plantId)
 );
 
