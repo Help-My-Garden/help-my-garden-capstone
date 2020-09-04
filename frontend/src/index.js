@@ -35,7 +35,7 @@ const Routing = (store) => (
 			<BrowserRouter>
 
 				<Switch>
-					<Route exact path="/plant" component={Plant}/>
+					<Route exact path="/plant/:plantId" component={Plant}/>
 					<Route exact path="/my-plant-list" component={MyPlantList}/>
 					<Route exact path="/all-plants" component={AllPlants}/>
 					<Route exact path="/about-us" component={AboutUs}/>

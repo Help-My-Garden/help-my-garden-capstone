@@ -25,7 +25,7 @@ export const PlantCard = ({ plant }) => {
 			<div className = "row" >
 				<div className = "col-md-6" >
 					<div className = "row" >
-						<a href = "/plant" >
+						<a href ={`/plant/${plant.plantId}`} >
 							<div className = "col-md-6" >
 
 								<p style = {{
