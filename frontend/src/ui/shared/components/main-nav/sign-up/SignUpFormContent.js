@@ -96,7 +96,7 @@ export const SignUpFormContent = (props) => {
 
 
         <div className="form-group">
-          <label htmlFor="profileHandle">@Handle</label>
+          <label htmlFor="profileName">user name</label>
           <div className="input-group">
             <div className="input-group-prepend">
               <div className="input-group-text">
@@ -105,52 +105,24 @@ export const SignUpFormContent = (props) => {
             </div>
             <input
               className="form-control"
-              name="profileAtHandle"
+              name="profileName"
               type="text"
-              value={values.profileAtHandle}
-              placeholder="@Handle"
+              value={values.profileName}
+              placeholder="UserName"
               onChange={handleChange}
               onBlur={handleBlur}
 
             />
           </div>
           {
-            errors.profileAtHandle && touched.profileAtHandle && (
+            errors.profileName && touched.profileName && (
               <div className="alert alert-danger">
-                {errors.profileAtHandle}
+                {errors.profileName}
               </div>
             )
           }
         </div>
 
-
-        <div className="form-group">
-          <label htmlFor="profilePhone">Phone Number</label>
-          <div className="input-group">
-            <div className="input-group-prepend">
-              <div className="input-group-text">
-                <FontAwesomeIcon icon="phone"/>
-              </div>
-            </div>
-            <input
-              className="form-control"
-              name="profilePhone"
-              type="text"
-              value={values.profilePhone}
-              placeholder="Enter email"
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
-          </div>
-          {
-            errors.profilePhone && touched.profilePhone && (
-              <div className="alert alert-danger">
-                {errors.profilePhone}
-              </div>
-            )
-
-          }
-        </div>
         <div className="form-group">
           <button className="btn btn-primary mb-2" type="submit">Submit</button>
           <button

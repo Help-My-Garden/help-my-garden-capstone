@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import image from "../../../sharedimg/world-logo-black.png"
 import {useState} from "react";
 import { SignInForm } from './sign-in/SignInForm'
+import { SignUpForm } from './sign-up/SignUpForm'
 
 
 
@@ -62,7 +63,7 @@ export function NavbarCom () {
 						<Modal.Title>Sign Up</Modal.Title>
 					</Modal.Header>
 					<Modal.Body>
-						<SignInForm/>
+						<SignUpForm/>
 					</Modal.Body>
 				</Modal>
 			</div>
