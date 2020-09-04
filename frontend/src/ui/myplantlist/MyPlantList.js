@@ -6,6 +6,15 @@ import Nav from "react-bootstrap/Nav";
 import {MyListCard} from "../shared/components/mylistcard/MyListCard";
 
 export const MyPlantList = () =>{
+
+	const plantProfile = useSelector(state => state.plantProfileProfileId ? state.plantProfileProfileId : []);
+	const dispatch = useDispatch();
+	const effects = () => {
+		dispatch(fetchAllTweets());
+	};
+	const inputs = [];
+	useEffect(effects, inputs);
+
 	return(
 		<>
 			<Navbar className="row fluid navbar-dark" collapseOnSelect expand="md" style={{

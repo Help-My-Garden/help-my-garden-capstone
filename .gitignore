@@ -25,3 +25,6 @@ help-my-garden.env
 */yarn-error.log*
 help-my-garden.env
 /backend/package-lock.json
+
+/frontend/src/setupProxy.js
+/frontend/src/setupProxyExample.js
