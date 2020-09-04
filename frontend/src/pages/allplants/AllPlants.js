@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import 'bootstrap/dist/css/bootstrap.css';
 import {SearchCom} from "../../shared/components/plant-catagory-selector/Search";
-import {PlantCard} from "../../shared/components/allplantscard/ContentCards";
+import {PlantCard} from "./PlantCard";
 import Navbar from "react-bootstrap/Navbar";
 import image from "../../ui/sharedimg/world-logo-black.png";
 import Nav from "react-bootstrap/Nav";
@@ -47,7 +47,7 @@ export const AllPlants = () => {
 					margin: "2rem auto 1rem auto",
 					padding: "1rem",
 				}}>
-				<PlantCard/>
+					{plants.map(plant => <PlantCard plant={plant}/>)}
 			</section>
 		</>
 	)
