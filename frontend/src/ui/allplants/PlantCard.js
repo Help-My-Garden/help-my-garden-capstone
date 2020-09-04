@@ -1,8 +1,23 @@
 import React from "react";
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { httpConfig } from '../../shared/utils/http-config'
 
 export const PlantCard = ({ plant }) => {
 
+	const dispatch = useDispatch()
+
+	const clickAddToList = () => {
+		httpConfig.post("/apis/plant-profile/", {plantProfilePlantId: plant.plantId})
+			.then(reply => {
+					let {message, type} = reply
+					if(reply.status === 200) {
+						console.log(reply)
+						// dispatch(getAllTweets())
+					}
+					console.log(reply)
+				}
+			);
+	}
 
 
 	return (
@@ -44,7 +59,7 @@ export const PlantCard = ({ plant }) => {
 								<p>{plant.plantSize}</p >
 							</div >
 							<div className = "row" >
-								<button className = "btn btn-success" >Add to List</button >
+								<button onClick={clickAddToList} className = "btn btn-success" >Add to List</button >
 							</div >
 						</div >
 					</div >
