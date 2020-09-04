@@ -15,7 +15,6 @@ const {validationResult} = require('express-validator');
 export async function togglePlantProfileController(request: Request, response: Response) {
 
     try {
-        validationResult(request).throw();
 
         const {plantProfilePlantId} = request.body;
         const profile: Profile = request.session?.profile
