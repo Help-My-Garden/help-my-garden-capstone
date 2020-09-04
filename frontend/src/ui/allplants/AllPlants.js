@@ -1,9 +1,9 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.css';
-import {SearchCom} from "../../shared/components/plant-catagory-selector/Search";
-import {ContentCardsCom} from "../../shared/components/allplantscard/ContentCards";
+import {SearchCom} from "../shared/components/plant-catagory-selector/Search";
+import {ContentCardsCom} from "../shared/components/allplantscard/ContentCards";
 import Navbar from "react-bootstrap/Navbar";
-import image from "../../ui/sharedimg/world-logo-black.png";
+import image from "../sharedimg/world-logo-black.png";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
