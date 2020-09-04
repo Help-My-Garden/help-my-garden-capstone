@@ -11,14 +11,16 @@ const UserListComponent = (props) => {
       <Route render={({history}) => (
         <tr
           onClick={() => {
-            history.push(`user/${user.userId}`)
+            history.push(`user/${plants.plantId}`)
           }}>
-          <td>{user.userId}</td>
-          <td>{user.name}</td>
-          <td>{user.email}</td>
-          <td>{user.phone}</td>
-          <td>{user.username}</td>
-          <td>{user.website}</td>
+          <td>{plant.plantFamilyName}</td>
+          <td>{plant.plantCommonName}</td>
+          <td>{plant.plantScientificName}</td>
+          <td>{plant.plantColor}</td>
+          <td>{plant.plantImageUrl}</td>
+          <td>{plant.plantDuration}</td>
+          <td>{plant.plantSunlight}</td>
+          <td>{plant.plantSize}</td>
         </tr>
       )}
       />
@@ -26,4 +28,4 @@ const UserListComponent = (props) => {
   )
 };
 
-export const UserListItem = (UserListComponent);
+export const PlantListItem = (PlantListComponent);
