@@ -1,8 +1,20 @@
 import React from "react";
-import image from "../../../ui/sharedimg/world-logo-black.png";
+import { useSelector } from 'react-redux'
 
 
-export function ContentCardsCom() {
+
+export const plantCard = ({ post }) => {
+
+	const users = useSelector((state) => state.users ? state.users : null)
+
+	const FindPlants = () => {
+		const profile = profile.find(profile => post.plantProfilePlantId === profile.profileId)
+		return (
+			<>
+				{profile && <h3>{profile.username}</h3>}
+			</>
+		)
+	}
 
 	return (
 		<>
@@ -17,9 +29,6 @@ export function ContentCardsCom() {
 									textDecoration: "underline",
 								}} >
 									Rose</p >
-								<img src = {image} alt = "Logo" style = {{
-									width: "250px",
-								}} />
 
 							</div >
 						</a >
