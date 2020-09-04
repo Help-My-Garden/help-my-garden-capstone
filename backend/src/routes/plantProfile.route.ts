@@ -5,9 +5,10 @@ import {check} from "express-validator";
 
 const plantProfileIdRouter = Router();
 
-plantProfileIdRouter.route("/plantProfileId/:plantProfileId")
-    .get(getPlantsController)
+/*plantProfileIdRouter.route("/plantProfileId/:plantProfileId")
+    .get(getPlantsController)*/
 
-plantProfileIdRouter.route("/").post([check("plantProfilePlantId").isUUID()],togglePlantProfileController)
+plantProfileIdRouter.route("/")
+    .post([check("plantProfilePlantId").isUUID()],togglePlantProfileController)
 
 export default plantProfileIdRouter
