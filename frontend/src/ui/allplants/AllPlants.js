@@ -1,13 +1,15 @@
 import React, { useEffect } from "react"
 import 'bootstrap/dist/css/bootstrap.css';
-import {SearchCom} from "../../shared/components/plant-catagory-selector/Search";
 import {PlantCard} from "./PlantCard";
+
+
 import Navbar from "react-bootstrap/Navbar";
-import image from "../../ui/sharedimg/world-logo-black.png";
+import image from "../sharedimg/world-logo-black.png";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllPlants } from '../../store/plants'
+import { SearchCom } from '../shared/components/plant-catagory-selector/Search'
 
 
 export const AllPlants = () => {

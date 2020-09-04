@@ -7,6 +7,7 @@ import {selectAllPlantsByCommonName} from "../../utils/plant/selectAllPlantsByCo
 import {selectAllPlantsById} from "../../utils/plant/selectAllPlantsById";
 import {selectAllPlantsFamilyName} from "../../utils/plant/selectAllPlantsByFamilyName";
 import {selectAllPlantsByScientificName} from "../../utils/plant/selectAllPlantsByScientificName";
+import {selectAllPlantsByPlantProfileId} from "../../utils/plant/selectAllPlantsByPlantProfileId";
 
 export async function getPlantsController(request: Request, response: Response): Promise<Response | void>{
 
@@ -83,6 +84,17 @@ export async function getPlantsByScientificNameController(request: Request, resp
     try {
         const {plantScientificName} = request.params
         const data = await selectAllPlantsByScientificName(plantScientificName)
+        // return the response
+        return response.json({status: 200, message: null, data});
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export async function getPlantsByPlantProfileIdController(request: Request, response: Response){
+    try {
+        const {plantProfileId} = request.params
+        const data = await selectAllPlantsByPlantProfileId(plantProfileId)
         // return the response
         return response.json({status: 200, message: null, data});
     } catch (error) {

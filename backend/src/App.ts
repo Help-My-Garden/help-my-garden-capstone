@@ -13,13 +13,8 @@ import passport = require('passport');
 import {SignOutRoute} from "./routes/sign-out.route";
 const MemoryStore = require('memorystore')(session);
 import csrf from "csurf";
-import AllPlantsRouter from "./routes/allPlants.route";
-import plantsByColorRouter from "./routes/allPlantsByColor.route";
-import plantsByCommonNameRouter from "./routes/allPlantsByCommonName.route";
-import plantsByDurationRouter from "./routes/allPlantsByDuration.route";
-import plantsByFamilyNameRouter from "./routes/allPlantsByFamilyName.route";
-import plantsByIdRouter from "./routes/allPlantsById.route";
-import plantsByScientificNameRouter from "./routes/allPlantsByScientificName.route";
+import allPlantsRouter from "./routes/allPlants.route";
+import togglePlantProfileIdRouter from "./routes/togglePlantProfile.route";
 
 
 // The following class creates the frontend and instantiates the server
@@ -69,13 +64,8 @@ export class App {
         this.app.use('/apis/sign-in', SignInRouter);
         this.app.use('/apis/sign-out', SignOutRoute);
         this.app.use('/apis/sign-up', SignupRoute);
-        this.app.use('/apis/plants', AllPlantsRouter);
-        this.app.use('/apis/plant-color', plantsByColorRouter)
-        this.app.use('/apis/plant-common-name', plantsByCommonNameRouter)
-        this.app.use('/apis/plant-duration', plantsByDurationRouter)
-        this.app.use('/apis/plant-family-name', plantsByFamilyNameRouter)
-        this.app.use('/apis/plantId', plantsByIdRouter)
-        this.app.use('/apis/plant-scientific-name', plantsByScientificNameRouter)
+        this.app.use('/apis/plants', allPlantsRouter);
+        this.app.use('/apis/plant-profile', togglePlantProfileIdRouter)
     }
 
     // starts the server and tells the terminal to post a message that the server is running and on what port

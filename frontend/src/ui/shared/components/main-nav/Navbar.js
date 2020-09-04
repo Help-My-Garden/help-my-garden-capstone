@@ -4,7 +4,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import image from "../../../ui/sharedimg/world-logo-black.png"
+import image from "../../../sharedimg/world-logo-black.png"
 import {useState} from "react";
 import { SignInForm } from './sign-in/SignInForm'
 
@@ -26,7 +26,7 @@ export function NavbarCom () {
 			<div className="container sticky-top">
 				<Navbar className="row fluid navbar-dark" collapseOnSelect expand="md">
 					<a href = "/" >
-					<img src = {image} alt = "Help My Garden logo" width="100"/>
+						<img src = {image} alt = "Help My Garden logo" width="100"/>
 					</a >
 					<Navbar.Brand href="/" style={{color: "white",}}>Help My Garden</Navbar.Brand>
 					<Navbar.Toggle className="ml-auto" aria-controls="responsive-navbar-nav" />
@@ -62,34 +62,7 @@ export function NavbarCom () {
 						<Modal.Title>Sign Up</Modal.Title>
 					</Modal.Header>
 					<Modal.Body>
-						<div className = "information" >
-							<label className = "form-label" >Name
-								<input className = "form-control col-md-12" type = "text" name = "name" id = "name"
-											 placeholder = "Name" />
-							</label >
-						</div >
-						<div className = "information" >
-							<label className = "form-label" >User Name
-								<input className = "form-control col-md-12" type = "text" name = "user-name" id = "user-name"
-											 placeholder = "User Name" />
-							</label >
-						</div >
-						<div className = "information" >
-							<label className = "form-label" >Email
-								<input className = "form-control col-md-12" type = "email" name = "email" id = "email"
-											 placeholder = "Email" />
-							</label >
-						</div >
-						<div className = "information" >
-							<label className = "form-label" >Password
-								<input className = "form-control col-md-12" type = "password" name = "password" id = "password"
-											 placeholder = "Password" />
-							</label >
-						</div >
-						<div className = "g-recaptcha" data-sitekey = "6LcHZG0UAAAAAHCSdqZNJATJ1VNMjUxf4sm4jOlM" ></div >
-						<Button className="mr-" variant="primary" onClick={handleClose2}>
-						Sign Up
-					</Button>
+						<SignInForm/>
 					</Modal.Body>
 				</Modal>
 			</div>

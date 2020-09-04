@@ -3,6 +3,7 @@ import * as jwtDecode from "jwt-decode";
 
 
 const slice = createSlice({
+
   name: "auth",
   initialState: null,
   reducers: {
@@ -25,6 +26,8 @@ export const fetchAuth = () => async (dispatch, getState) => {
     }
     dispatch(getAuth(decodedToken))
   }
+
+
 
 };
 

@@ -26,4 +26,6 @@ help-my-garden.env
 help-my-garden.env
 /backend/package-lock.json
 
+/frontend/src/setupProxy.js
+
 
