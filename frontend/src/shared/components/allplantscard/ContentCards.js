@@ -1,19 +1,14 @@
 import React from "react";
 import { useSelector } from 'react-redux'
+import { PlantListComponent } from '../../../pages/allplants/PlantListItem'
 
+export const PlantCard = ({ plants }) => {
 
-
-export const plantCard = ({ post }) => {
-
-	const users = useSelector((state) => state.users ? state.users : null)
+	const plants = useSelector((state) => state.plants ? state.plants : null)
 
 	const FindPlants = () => {
-		const profile = profile.find(profile => post.plantProfilePlantId === profile.profileId)
-		return (
-			<>
-				{profile && <h3>{profile.username}</h3>}
-			</>
-		)
+		const plants = plants.find(plants => plants.plantId === plants.plantId)
+
 	}
 
 	return (
@@ -28,7 +23,10 @@ export const plantCard = ({ post }) => {
 									color: "blue",
 									textDecoration: "underline",
 								}} >
-									Rose</p >
+									{plants.plantCommonName}</p >
+								<img src = {plants.plantImageUrl} alt = "trefle database plant image" style = {{
+									width: "250px",
+								}} />
 
 							</div >
 						</a >
@@ -38,8 +36,7 @@ export const plantCard = ({ post }) => {
 								borderRadius: "20px",
 								padding: "1rem",
 							}} >
-								<p >Happy little ipsum. Be sure to use odorless paint-thinner. If it's not odorless, you'll find
-										yourself working alone very, very quick.</p >
+								<PlantListComponent />
 							</div >
 							<div className = "row" >
 								<button className = "btn btn-primary" >Add to List</button >

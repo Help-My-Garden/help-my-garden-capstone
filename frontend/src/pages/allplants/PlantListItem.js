@@ -1,8 +1,8 @@
 import React from 'react';
 import {Route} from 'react-router';
 
-const UserListComponent = (props) => {
-  const {user} = props;
+export const PlantListComponent = (props) => {
+  const {plants} = props;
 
   // This component takes advantage of the render prop pattern https://css-tricks.com/an-overview-of-render-props-in-react/.
   return (
@@ -11,16 +11,15 @@ const UserListComponent = (props) => {
       <Route render={({history}) => (
         <tr
           onClick={() => {
-            history.push(`user/${plants.plantId}`)
+            history.push(`plants/${plants.plantId}`)
           }}>
-          <td>{plant.plantFamilyName}</td>
-          <td>{plant.plantCommonName}</td>
-          <td>{plant.plantScientificName}</td>
-          <td>{plant.plantColor}</td>
-          <td>{plant.plantImageUrl}</td>
-          <td>{plant.plantDuration}</td>
-          <td>{plant.plantSunlight}</td>
-          <td>{plant.plantSize}</td>
+          <td>{plants.plantFamilyName}</td>
+          <td>{plants.plantScientificName}</td>
+          <td>{plants.plantColor}</td>
+          <td>{plants.plantImageUrl}</td>
+          <td>{plants.plantDuration}</td>
+          <td>{plants.plantSunlight}</td>
+          <td>{plants.plantSize}</td>
         </tr>
       )}
       />
@@ -28,4 +27,3 @@ const UserListComponent = (props) => {
   )
 };
 
-export const PlantListItem = (PlantListComponent);
