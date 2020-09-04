@@ -4,7 +4,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import image from "../../../ui/sharedimg/world-logo-black.png"
+import image from "../../../sharedimg/world-logo-black.png"
 import {useState} from "react";
 
 

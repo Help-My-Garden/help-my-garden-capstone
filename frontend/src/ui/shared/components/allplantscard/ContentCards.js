@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../../ui/sharedimg/world-logo-black.png";
+import image from "../../../sharedimg/world-logo-black.png";
 
 
 export function ContentCardsCom() {

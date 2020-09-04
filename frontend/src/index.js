@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom'
 import 'bootstrap/dist/css/bootstrap.css';
 import {BrowserRouter} from "react-router-dom";
 import {Route, Switch} from "react-router";
-import {Home} from "./pages/home/Home";
-import {AllPlants} from "./pages/allplants/AllPlants";
-import {Plant} from "./pages/plant/Plant";
-import {MyPlantList} from "./pages/myplantlist/MyPlantList";
-import {AboutUs} from './pages/aboutus/AboutUs'
-import {FourOhFour} from "./pages/fourohfour/FourOhFour";
+import {Home} from "./ui/home/Home";
+import {AllPlants} from "./ui/allplants/AllPlants";
+import {Plant} from "./ui/plant/Plant";
+import {MyPlantList} from "./ui/myplantlist/MyPlantList";
+import {AboutUs} from './ui/aboutus/AboutUs'
+import {FourOhFour} from "./ui/fourohfour/FourOhFour";
 
 function Routing (){
 	return(

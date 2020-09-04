@@ -1,9 +1,9 @@
 import React from "react";
-import {SearchCom} from "../../shared/components/plant-catagory-selector/Search";
+import {SearchCom} from "../shared/components/plant-catagory-selector/Search";
 import Navbar from "react-bootstrap/Navbar";
-import image from "../../ui/sharedimg/world-logo-black.png";
+import image from "../sharedimg/world-logo-black.png";
 import Nav from "react-bootstrap/Nav";
-import {MyListCard} from "../../shared/components/mylistcard/MyListCard";
+import {MyListCard} from "../shared/components/mylistcard/MyListCard";
 
 export const MyPlantList = () =>{
 	return(
