@@ -49,7 +49,7 @@ export const AllPlants = () => {
 					margin: "2rem auto 1rem auto",
 					padding: "1rem",
 				}}>
-					{plants.map(plant => <PlantCard plant={plant}/>)}
+					{plants.map(plant => <PlantCard plant={plant} key={plant.plantId}/>)}
 			</section>
 		</>
 	)

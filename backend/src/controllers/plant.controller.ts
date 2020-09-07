@@ -72,7 +72,9 @@ export async function getPlantsByFamilyNameController(request: Request, response
 export async function getPlantsByIdController(request: Request, response: Response, nextFunction: NextFunction){
     try {
         const {plantId} = request.params
+        console.log(plantId)
         const data = await selectAllPlantsById(plantId)
+        console.log(data)
         // return the response
         return response.json({status: 200, message: null, data});
     } catch (error) {

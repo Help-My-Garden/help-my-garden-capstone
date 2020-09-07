@@ -31,11 +31,12 @@ export const Plant = ({match}) => {
   useEffect(sideEffects, sideEffectInputs);
 
 
-  const plant = useSelector(state => (
-    state.plants
+  const plant = useSelector(state => {
+    console.log(state.plants[0])
+    return state.plants
       ? state.plants[0]
       : null
-  ));
+  });
   // console.log(state)
   return (
     <>
@@ -80,11 +81,6 @@ export const Plant = ({match}) => {
                       <li>Light Preference:</li>
                       <li>Size:</li>
                     </ul>
-                    <div>
-                      {/*{*/}
-                      {/*  plant.map(plant => <PlantCard key={plant.plantId} plant={plant}/>)*/}
-                      {/*}*/}
-                    </div>
                   </Col>
                 </Row>
               </Container>
