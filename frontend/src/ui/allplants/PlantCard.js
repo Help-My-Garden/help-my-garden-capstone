@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import { httpConfig } from '../../shared/utils/http-config'
+import {getAllPlants} from "../../store/plants";
 
 export const PlantCard = ({ plant }) => {
 
@@ -12,7 +13,7 @@ export const PlantCard = ({ plant }) => {
 					let {message, type} = reply
 					if(reply.status === 200) {
 						console.log(reply)
-						// dispatch(getAllPlants())
+						dispatch(getAllPlants())
 					}
 					console.log(reply)
 				}

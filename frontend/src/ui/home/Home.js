@@ -4,12 +4,17 @@ import 'bootstrap/dist/css/bootstrap.css';
 import {NavbarCom} from "../shared/components/main-nav/Navbar";
 import Jumbotron from "react-bootstrap/cjs/Jumbotron";
 import Button from "react-bootstrap/cjs/Button";
-import Carousel from "react-bootstrap/cjs/Carousel";
-import image from "../sharedimg/600x400.jpg";
+import Carousel from "react-bootstrap/Carousel";
 import { fetchTenRandomPlants } from '../../store/plants'
 import { PlantCarousel } from './PlantCarousel'
 
 export const Home = () => {
+
+	const [index, setIndex] = React.useState(0)
+
+	const handleSelect = (selectedIndex, e) => {
+		setIndex(selectedIndex)
+	}
 
 	const plants = useSelector(state => state.plants ? state.plants : []);
 	const dispatch = useDispatch();
@@ -18,7 +23,6 @@ export const Home = () => {
 	};
 	const inputs = [];
 	useEffect(effects, inputs);
-	console.log(plants)
 	return (
 		<>
 			<div className="container m-auto p-0" style={{
@@ -40,7 +44,7 @@ export const Home = () => {
 			<Button href="/all-plants" variant="primary">Learn more</Button>
 			</p>
 			</Jumbotron>
-			<Carousel className="container">
+			<Carousel /*activeIndex = {index} onSelect = {handleSelect}*/interval={10000} style={{ height: "400px",}}>
 				{plants.map(plant => <PlantCarousel plant={plant} key={plant.plantId}/>)}
 			</Carousel>
 			<footer style={{
