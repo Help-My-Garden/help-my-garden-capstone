@@ -6,8 +6,19 @@ import Jumbotron from "react-bootstrap/cjs/Jumbotron";
 import Button from "react-bootstrap/cjs/Button";
 import Carousel from "react-bootstrap/cjs/Carousel";
 import image from "../sharedimg/600x400.jpg";
+import { fetchTenRandomPlants } from '../../store/plants'
+import { PlantCarousel } from './PlantCarousel'
 
 export const Home = () => {
+
+	const plants = useSelector(state => state.plants ? state.plants : []);
+	const dispatch = useDispatch();
+	const effects = () => {
+		dispatch(fetchTenRandomPlants());
+	};
+	const inputs = [];
+	useEffect(effects, inputs);
+	console.log(plants)
 	return (
 		<>
 			<div className="container m-auto p-0" style={{
@@ -30,18 +41,7 @@ export const Home = () => {
 			</p>
 			</Jumbotron>
 			<Carousel className="container">
-				<Carousel.Item>
-					<img
-						className="img-fluid"
-						src={image}
-						alt="random slides of plants"
-					/>
-					<Carousel.Caption>
-						<p></p>
-
-					</Carousel.Caption>
-				</Carousel.Item>
-
+				{plants.map(plant => <PlantCarousel plant={plant} key={plant.plantId}/>)}
 			</Carousel>
 			<footer style={{
 				display: "block",
