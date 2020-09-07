@@ -44,8 +44,21 @@ export const Home = () => {
 			<Button href="/all-plants" variant="primary">Learn more</Button>
 			</p>
 			</Jumbotron>
-			<Carousel /*activeIndex = {index} onSelect = {handleSelect}*/interval={10000} style={{ height: "400px",}}>
-				{plants.map(plant => <PlantCarousel plant={plant} key={plant.plantId}/>)}
+			<Carousel>
+				{plants.map(plant =>
+					(<Carousel.Item key = {plant.plantId}>
+						<img
+							style={{height:"800px", width:"500px", objectFit:"contain",}}
+							className="d-block w-100"
+							src={plant.plantImageUrl}
+							alt={plant.plantCommonName}
+						/>
+						<Carousel.Caption>
+							{plant.plantScientificName}
+							{plant.plantSize}
+						</Carousel.Caption>
+					</Carousel.Item>))
+				}
 			</Carousel>
 			<footer style={{
 				display: "block",

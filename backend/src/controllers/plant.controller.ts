@@ -22,7 +22,7 @@ export async function getPlantsController(request: Request, response: Response):
     }
 }
 
-export async function getPlantsByColorController(request: Request, response: Response, nextFunction: NextFunction) {
+export async function getPlantsByColorController(request: Request, response: Response) {
     try {
         const {plantColor} = request.params
         const data = await selectAllPlantsByColor(plantColor)
@@ -34,7 +34,7 @@ export async function getPlantsByColorController(request: Request, response: Res
 }
 
 
-export async function getPlantsByCommonNameController(request: Request, response: Response, nextFunction: NextFunction) {
+export async function getPlantsByCommonNameController(request: Request, response: Response) {
     try {
         const {plantCommonName} = request.params
         const data = await selectAllPlantsByCommonName(plantCommonName)
@@ -46,7 +46,7 @@ export async function getPlantsByCommonNameController(request: Request, response
 }
 
 
-export async function getPlantsByDurationController(request: Request, response: Response, nextFunction: NextFunction) {
+export async function getPlantsByDurationController(request: Request, response: Response) {
     try {
         const {plantDuration} = request.params
         const data = await selectAllPlantsByDuration(plantDuration)
@@ -58,7 +58,7 @@ export async function getPlantsByDurationController(request: Request, response: 
 }
 
 
-export async function getPlantsByFamilyNameController(request: Request, response: Response, nextFunction: NextFunction){
+export async function getPlantsByFamilyNameController(request: Request, response: Response){
     try {
         const {plantFamilyName} = request.params
         const data = await selectAllPlantsFamilyName(plantFamilyName)
@@ -70,7 +70,7 @@ export async function getPlantsByFamilyNameController(request: Request, response
 }
 
 
-export async function getPlantsByIdController(request: Request, response: Response, nextFunction: NextFunction){
+export async function getPlantsByIdController(request: Request, response: Response){
     try {
         const {plantId} = request.params
         console.log(plantId)

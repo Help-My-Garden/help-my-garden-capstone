@@ -3,7 +3,7 @@ import {SearchCom} from "../shared/components/plant-catagory-selector/Search";
 import Navbar from "react-bootstrap/Navbar";
 import image from "../sharedimg/world-logo-black.png";
 import Nav from "react-bootstrap/Nav";
-import {MyListCard} from "../shared/components/mylistcard/MyListCard";
+import {MyListCard} from "./MyListCard";
 import { useDispatch, useSelector } from 'react-redux'
 
 export const MyPlantList = () =>{
