@@ -25,7 +25,7 @@ export const fetchAllPlants = () => async (dispatch) => {
 };
 
 export const fetchTenRandomPlants = () => async (dispatch) => {
-  const {data} =  await httpConfig.get("/apis/plants/ten-plant/random");
+  const {data} =  await httpConfig.get("/apis/plants/ten-plants/random");
   dispatch(getTenRandomPlants(data));
 };
 

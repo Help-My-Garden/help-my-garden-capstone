@@ -1,8 +1,8 @@
-import image from '../sharedimg/600x400.jpg'
 import Carousel from 'react-bootstrap/cjs/Carousel'
 import React from 'react'
 export function PlantCarousel (props) {
   const{plant}=props
+  console.log(plant)
   return (
     <>
       <Carousel.Item>
