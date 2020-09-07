@@ -34,36 +34,14 @@ export const Home = () => {
 					<img
 						className="img-fluid"
 						src={image}
-						alt="First slide"
+						alt="random slides of plants"
 					/>
 					<Carousel.Caption>
-						<h3>First slide label</h3>
-						<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-					</Carousel.Caption>
-				</Carousel.Item>
-				<Carousel.Item>
-					<img
-						className="img-fluid"
-						src= {image}
-						alt="Third slide"
-					/>
+						<p></p>
 
-					<Carousel.Caption>
-						<h3>Second slide label</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 					</Carousel.Caption>
 				</Carousel.Item>
-				<Carousel.Item>
-					<img
-						className="img-fluid"
-						src= {image}
-						alt="Third slide"
-					/>
-					<Carousel.Caption>
-						<h3>Third slide label</h3>
-						<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-					</Carousel.Caption>
-				</Carousel.Item>
+
 			</Carousel>
 			<footer style={{
 				display: "block",

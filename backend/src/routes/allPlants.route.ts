@@ -5,7 +5,7 @@ import {
     getPlantsByDurationController,
     getPlantsByFamilyNameController,
     getPlantsByIdController, getPlantsByPlantProfileIdController, getPlantsByScientificNameController,
-    getPlantsController
+    getPlantsController, getTenRandomPlantsController
 } from "../controllers/plant.controller";
 import {asyncValidatorController} from "../controllers/asyncValidator.controller";
 import {check} from "express-validator";
@@ -16,6 +16,8 @@ const allPlantsRouter = Router();
 allPlantsRouter.route('/').get(getPlantsController)
 
 allPlantsRouter.route('/:plantId').get(asyncValidatorController([check("plantId", "please provide plant id").isUUID()]), getPlantsByIdController)
+
+allPlantsRouter.route('/ten-plants/random').get(getTenRandomPlantsController)
 
 allPlantsRouter.route('/plant-color/:plantColor').get(asyncValidatorController([check("plantColor", "please provide plant color").isString().notEmpty().trim().escape()]), getPlantsByColorController)
 
@@ -28,5 +30,7 @@ allPlantsRouter.route('/plant-family-name/:plantFamilyName').get(asyncValidatorC
 allPlantsRouter.route('/plant-scientific-name/:plantScientificName').get(asyncValidatorController([check("plantScientificName", "please provide plant scientific name").isString().notEmpty().trim().escape()]), getPlantsByScientificNameController)
 
 allPlantsRouter.route('/plant-profile/:plantProfileId').get(isLoggedIn, asyncValidatorController([check("plantProfileId", "please provide plant profile id").isUUID()]), getPlantsByPlantProfileIdController)
+
+
 
 export default allPlantsRouter;

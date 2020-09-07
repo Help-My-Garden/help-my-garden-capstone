@@ -10,15 +10,23 @@ const slice = createSlice({
     },
     getPlantByPlantId : (plants, action) => {
       plants.push(action.payload)
+    },
+    getTenRandomPlants : (plants, action) => {
+      return action.payload
     }
   }
 })
 
-export const {getAllPlants, getPlantByPlantId} = slice.actions
+export const {getAllPlants, getPlantByPlantId, getTenRandomPlants} = slice.actions
 
 export const fetchAllPlants = () => async (dispatch) => {
   const {data} =  await httpConfig.get("/apis/plants/");
   dispatch(getAllPlants(data));
+};
+
+export const fetchTenRandomPlants = () => async (dispatch) => {
+  const {data} =  await httpConfig.get("/apis/plants/ten-plant/random");
+  dispatch(getTenRandomPlants(data));
 };
 
 export const fetchPlantByPlantId = (id) => async (dispatch) => {
