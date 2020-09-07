@@ -8,6 +8,7 @@ import { Col, Container, Row } from 'reactstrap'
 import Jumbotron from 'react-bootstrap/cjs/Jumbotron'
 import Image from 'react-bootstrap/Image'
 import { fetchPlantByPlantId } from '../../store/plants'
+import { PlantCard } from '../allplants/PlantCard'
 
 export const Plant = ({match}) => {
 // Returns the the userPosts store from redux and assigns it to the userPosts variable.
@@ -35,7 +36,7 @@ export const Plant = ({match}) => {
       ? state.plants[0]
       : null
   ));
-  console.log(plant)
+  // console.log(state)
   return (
     <>
       <Navbar className="row fluid navbar-dark" collapseOnSelect expand="md" style={{
@@ -67,9 +68,10 @@ export const Plant = ({match}) => {
                     <Image src="React-Static-Example.jpg" fluid />
                   </Col>
                   <Col md="6">
-                    <h1>{plant && plant.plantCommonName}</h1>
+
                     <ul>
-                      <li>State:</li>
+                      <li>{plant && plant.plantCommonName}</li>
+                      <li>{plant && plant.plantColor}</li>
                       <li>Family Name:</li>
                       <li>Common Name:</li>
                       <li>Scientific Name:</li>
@@ -78,6 +80,11 @@ export const Plant = ({match}) => {
                       <li>Light Preference:</li>
                       <li>Size:</li>
                     </ul>
+                    <div>
+                      {/*{*/}
+                      {/*  plant.map(plant => <PlantCard key={plant.plantId} plant={plant}/>)*/}
+                      {/*}*/}
+                    </div>
                   </Col>
                 </Row>
               </Container>

@@ -12,7 +12,7 @@ export const PlantCard = ({ plant }) => {
 					let {message, type} = reply
 					if(reply.status === 200) {
 						console.log(reply)
-						// dispatch(getAllTweets())
+						// dispatch(getAllPlants())
 					}
 					console.log(reply)
 				}

@@ -1,10 +1,8 @@
 import React from 'react';
-
 import {Formik} from "formik";
 import * as Yup from "yup";
 import {SignInFormContent} from "./SignInFormContent";
 import {useDispatch} from "react-redux";
-
 import * as jwtDecode from 'jwt-decode'
 import { httpConfig } from '../../../../../shared/utils/http-config'
 import { getAuth } from '../../../../../store/auth'

@@ -36,3 +36,5 @@ create table plantProfile (
     FOREIGN KEY (plantProfileProfileId) REFERENCES profile(profileId),
     PRIMARY KEY (plantProfilePlantId, plantProfileProfileId)
 );
+
+select plantId from plant where plantId = UUID_TO_BIN('0003904d-eec6-11ea-a2a6-0242ac1b0002')
