@@ -6,7 +6,7 @@ import {Request, Response} from 'express';
 import {Status} from '../../utils/interfaces/Status';
 import {Profile} from "../../utils/interfaces/Profile";
 import {PlantProfile} from "../../utils/interfaces/PlantProfile";
-import {deletePlantProfile} from "../../utils/plant-profile/deletPlantProfile";
+import {deletePlantProfile} from "../../utils/plant-profile/deletePlantProfile";
 import {insertPlantProfile} from "../../utils/plant-profile/insertPlantProfile";
 import {selectPlantProfile} from "../../utils/plant-profile/selectPlantProfile";
 
