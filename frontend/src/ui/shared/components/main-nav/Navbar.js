@@ -51,9 +51,6 @@ export function NavbarCom () {
 					</Modal.Header>
 					<Modal.Body>
 						< SignInForm />
-						<Button variant="primary" onClick={handleClose}>
-							Log In
-						</Button>
 					</Modal.Body>
 				</Modal>
 

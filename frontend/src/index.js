@@ -26,14 +26,10 @@ const store = configureStore({reducer});
 library.add(faStroopwafel, faEnvelope, faKey, faDove, faPhone, faPencilAlt);
 
 
-
-
-
 const Routing = (store) => (
 	<>
 		<Provider store={store}>
 			<BrowserRouter>
-
 				<Switch>
 					<Route exact path="/plant/:plantId" component={Plant}/>
 					<Route exact path="/my-plant-list" component={MyPlantList}/>
