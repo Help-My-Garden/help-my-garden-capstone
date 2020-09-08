@@ -6,7 +6,7 @@ import Jumbotron from "react-bootstrap/cjs/Jumbotron";
 import Button from "react-bootstrap/cjs/Button";
 import Carousel from "react-bootstrap/Carousel";
 import { fetchTenRandomPlants } from '../../store/plants'
-import { PlantCarousel } from './PlantCarousel'
+
 
 export const Home = () => {
 
