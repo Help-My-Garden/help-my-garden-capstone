@@ -18,8 +18,11 @@ const slice = createSlice({
       return action.payload
     },
     removePlantByPlantId : (plants, action) => {
-     const index = plants.findIndex(plant => (plant.plantId === action.payload.plantId))
-      delete plants[index]
+      console.log(action.payload)
+     return plants.filter(plant => {
+
+       return plant.plantId !== action.payload.plantId})
+
     }
   }
 })
