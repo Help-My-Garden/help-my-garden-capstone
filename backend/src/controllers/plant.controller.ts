@@ -9,6 +9,7 @@ import {selectAllPlantsFamilyName} from "../../utils/plant/selectAllPlantsByFami
 import {selectAllPlantsByScientificName} from "../../utils/plant/selectAllPlantsByScientificName";
 import {selectAllPlantsByPlantProfileId} from "../../utils/plant/selectAllPlantsByPlantProfileId";
 import {selectTenRandomPlants} from "../../utils/plant/selectTenRandomPlants";
+import {Profile} from "../../utils/interfaces/Profile";
 
 export async function getPlantsController(request: Request, response: Response): Promise<Response | void>{
 
@@ -96,7 +97,10 @@ export async function getPlantsByScientificNameController(request: Request, resp
 
 export async function getPlantsByPlantProfileIdController(request: Request, response: Response){
     try {
-        const {plantProfileId} = request.params
+        const profile: Profile = request.session?.profile
+        const plantProfileId = <string>profile.profileId
+        console.log(plantProfileId, "plantProfileId")
+      /*  const {plantProfileId} = request.params*/
         const data = await selectAllPlantsByPlantProfileId(plantProfileId)
         // return the response
         return response.json({status: 200, message: null, data});

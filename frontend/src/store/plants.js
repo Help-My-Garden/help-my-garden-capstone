@@ -13,11 +13,18 @@ const slice = createSlice({
     },
     getTenRandomPlants : (plants, action) => {
       return action.payload
+    },
+    getPlantsByProfileId : (plants, action) => {
+      return action.payload
+    },
+    removePlantByPlantId : (plants, action) => {
+     const index = plants.findIndex(plant => (plant.plantId === action.payload.plantId))
+      delete plants[index]
     }
   }
 })
 
-export const {getAllPlants, getPlantByPlantId, getTenRandomPlants} = slice.actions
+export const {getAllPlants, getPlantByPlantId, getTenRandomPlants, getPlantsByProfileId, removePlantByPlantId} = slice.actions
 
 export const fetchAllPlants = () => async (dispatch) => {
   const {data} =  await httpConfig.get("/apis/plants/");
@@ -32,5 +39,10 @@ export const fetchTenRandomPlants = () => async (dispatch) => {
 export const fetchPlantByPlantId = (id) => async (dispatch) => {
   const {data} =  await httpConfig.get(`/apis/plants/${id}`);
   dispatch(getPlantByPlantId(data));
+};
+
+export const fetchPlantByProfileId= () => async (dispatch) => {
+  const {data} =  await httpConfig.get(`/apis/plants/plant-profile`);
+  dispatch(getPlantsByProfileId(data));
 };
 export default slice.reducer

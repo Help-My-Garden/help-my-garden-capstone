@@ -15,6 +15,8 @@ const allPlantsRouter = Router();
 
 allPlantsRouter.route('/').get(getPlantsController)
 
+allPlantsRouter.route('/plant-profile').get(isLoggedIn, getPlantsByPlantProfileIdController)
+
 allPlantsRouter.route('/:plantId').get(asyncValidatorController([check("plantId", "please provide plant id").isUUID()]), getPlantsByIdController)
 
 allPlantsRouter.route('/ten-plants/random').get(getTenRandomPlantsController)
@@ -28,9 +30,6 @@ allPlantsRouter.route('/plant-duration/:plantDuration').get(asyncValidatorContro
 allPlantsRouter.route('/plant-family-name/:plantFamilyName').get(asyncValidatorController([check("plantFamilyName", "please provide plant family name").isString().notEmpty().trim().escape()]), getPlantsByFamilyNameController)
 
 allPlantsRouter.route('/plant-scientific-name/:plantScientificName').get(asyncValidatorController([check("plantScientificName", "please provide plant scientific name").isString().notEmpty().trim().escape()]), getPlantsByScientificNameController)
-
-allPlantsRouter.route('/plant-profile/:plantProfileId').get(isLoggedIn, asyncValidatorController([check("plantProfileId", "please provide plant profile id").isUUID()]), getPlantsByPlantProfileIdController)
-
 
 
 export default allPlantsRouter;

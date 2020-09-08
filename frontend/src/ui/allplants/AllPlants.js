@@ -49,7 +49,9 @@ export const AllPlants = () => {
 					margin: "2rem auto 1rem auto",
 					padding: "1rem",
 				}}>
-					{plants.map(plant => <PlantCard plant={plant} key={plant.plantId}/>)}
+					<div className="row">
+						{plants.map(plant => <PlantCard plant={plant} key={plant.plantId}/>)}
+					</div>
 			</section>
 		</>
 	)
