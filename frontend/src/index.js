@@ -29,7 +29,7 @@ library.add(faStroopwafel, faEnvelope, faKey, faDove, faPhone, faPencilAlt);
 
 const Routing = (store) => (
 	<>
-		<div className="container-fluid" style={{backgroundImage: `url(${Image})`, backgroundAttachment: "fixed", padding: "0"}}>
+		<div className="container-fluid" style={{backgroundImage: `url(${Image})`, backgroundAttachment: "fixed", backgroundSize: "cover", padding: "0",}}>
 			<Provider store={store}>
 				<BrowserRouter>
 					<Switch>

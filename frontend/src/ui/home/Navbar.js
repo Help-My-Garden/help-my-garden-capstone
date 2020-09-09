@@ -34,8 +34,8 @@ export function NavbarCom () {
 					<Navbar.Collapse id="responsive-navbar-nav">
 						<Nav className="ml-auto">
 							<Nav.Link href="/all-plants" style={{color: "white",}}>Search</Nav.Link>
-							<Nav.Link href="" onClick={handleShow2} style={{color: "white",}}>Creat Account</Nav.Link>
 							<NavDropdown title="Account " id="collapsible-nav-dropdown">
+								<NavDropdown.Item href="" onClick={handleShow2}>Creat an Account</NavDropdown.Item>
 								<NavDropdown.Item href="" onClick={handleShow}>Log In</NavDropdown.Item>
 								<NavDropdown.Item href="/my-plant-list">My List</NavDropdown.Item>
 							</NavDropdown>

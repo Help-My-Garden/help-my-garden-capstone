@@ -35,9 +35,10 @@ export const MyPlantList = () =>{
 			</Navbar>
 		<SearchCom/>
 		<div className="container" style={{
-			backgroundColor: "grey",
+			backgroundColor: "#efefef",
+			borderRadius: "5px"
 		}}>
-			<div className="row">
+			<div className="row justify-content-md-around">
 				{plants.map(plant => <MyListCard plant={plant} key={plant.plantId}/>)}
 			</div>
 		</div>
