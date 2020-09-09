@@ -1,8 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/cjs/Button";
-
 export function SearchCom () {
-
 	return (
 		<>
 			<section className="container-md" style={{
@@ -11,7 +9,13 @@ export function SearchCom () {
 				padding: "1rem",
 				borderRadius: "5px",
 			}}>
-				<div className="row p-2">
+				<div className="row p-2r">
+					<div className = "information col-md-2" >
+						<label className = "form-label" >State
+							<input className = "form-control col-md-12" type = "text" name = "State" id = "State"
+										 placeholder = "State" />
+						</label >
+					</div >
 					<div className = "information col-md-2" >
 						<label className = "form-label" >Plant Family
 							<input className = "form-control col-md-12" type = "text" name = "plantFamily" id = "plantFamily"
@@ -45,5 +49,4 @@ export function SearchCom () {
 			</section>
 		</>
 	)
-
 }

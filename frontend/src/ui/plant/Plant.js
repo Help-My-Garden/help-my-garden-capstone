@@ -9,6 +9,7 @@ import Jumbotron from 'react-bootstrap/cjs/Jumbotron'
 import Image from 'react-bootstrap/Image'
 import { fetchPlantByPlantId } from '../../store/plants'
 import { PlantCard } from '../allplants/PlantCard'
+import PlantBackground from '../sharedimg/gina-santangelo-N7yXNocgRJg-unsplash.jpg'
 
 export const Plant = ({match}) => {
 // Returns the the userPosts store from redux and assigns it to the userPosts variable.
@@ -58,37 +59,49 @@ export const Plant = ({match}) => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      <div className="container-fluid" style={{
+        background: `url(${PlantBackground}) center fixed`,
+        backgroundSize:"cover",
+        height:"1300px",
+      }}>
+        <Container>
+          <Row>
+            <Col xs={{ size: 12}}>
+              <Jumbotron fluid style={{
+                backgroundColor:"rgb(100,68,51, .9)",
+              }}>
+                <Container>
+                  <Row>
+                    <Col  md="6">
+                      <Image src= {plant && plant.plantImageUrl} alt = "trefle database plant image" style = {{
+                        width: "350px",
+                      }}  />
+                    </Col>
+                    <Col md="6" style={{
+                      fontSize:"200%",
+                      color: "white",
+                      display: "flex",
+                      alignItems: "center",
+                    }}>
+
+                      <ul>
+                        <li>{plant && plant.plantCommonName}</li>
+                        <li>{plant && plant.plantScientificName}</li>
+                        <li>{plant && plant.plantFamilyName}</li>
+                        <li>{plant && plant.plantColor}</li>
+                        <li>{plant && plant.plantDuration}</li>
+                        <li>{plant && plant.plantSunlight}</li>
+                        <li>{plant && plant.plantSize}</li>
+                      </ul>
+                    </Col>
+                  </Row>
+                </Container>
+              </Jumbotron>
+            </Col>
+          </Row>
+        </Container>
+      </div>
       {/*<JumbotronInfo/>*/}
-      <Container>
-        <Row>
-          <Col xs={{ size: 12}}>
-            <Jumbotron fluid>
-              <Container>
-                <Row>
-                  <Col  md="6">
-                    <Image src= {plant && plant.plantImageUrl} alt = "trefle database plant image" style = {{
-                      width: "300px",
-                    }}  />
-                  </Col>
-                  <Col md="6">
-
-                    <ul>
-                      <li>{plant && plant.plantCommonName}</li>
-                      <li>{plant && plant.plantScientificName}</li>
-                      <li>{plant && plant.plantFamilyName}</li>
-                      <li>{plant && plant.plantColor}</li>
-                      <li>{plant && plant.plantDuration}</li>
-                      <li>{plant && plant.plantSunlight}</li>
-                      <li>{plant && plant.plantSize}</li>
-                    </ul>
-                  </Col>
-                </Row>
-              </Container>
-
-            </Jumbotron>
-          </Col>
-        </Row>
-      </Container>
     </>
   )
 }

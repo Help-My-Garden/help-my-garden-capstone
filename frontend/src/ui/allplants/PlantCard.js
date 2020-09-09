@@ -28,13 +28,15 @@ export const PlantCard = ({ plant }) => {
 		<>
 
 			<div className="col-md-6">
-				<Jumbotron>
+				<Jumbotron style={{
+					backgroundColor: "rgb(92,115,66)",
+				}}>
 					<Container>
-						<a href ={`/plant/${plant.plantId}`} >
-						<div className="row" style={{
-							// border:"solid 2px black",
-						}}>
 
+						<div className="row" style={{
+							border:"solid 2px black",
+						}}>
+							<a href ={`/plant/${plant.plantId}`} >
 
 
 								<div className = "col-md-5.5" >
@@ -54,7 +56,7 @@ export const PlantCard = ({ plant }) => {
 									}} />
 
 								</div >
-
+							</a	>
 							<div className = "col-md={{ span: 4, offset: 1.5 }}" style={{
 								alignItems: "flex-end",
 							}}>
@@ -65,7 +67,7 @@ export const PlantCard = ({ plant }) => {
 									borderRadius: "20px",
 									padding: "1rem",
 									marginLeft: ".5rem",
-									flexDirection: "row",
+
 								}} >
 									<ul>
 										<li>{plant.plantFamilyName}</li>
@@ -76,17 +78,17 @@ export const PlantCard = ({ plant }) => {
 										<li>{plant.plantSize}</li>
 									</ul>
 								</div >
+
 								<div className = "row" style = {{
 									justifyContent: "center",
 								}}>
+
 									<button onClick={clickAddToList} className = "btn btn-success" >Add to List</button >
 								</div >
-							</div >
+							</div>
 						</div>
-					</a	>
 					</Container>
 				</Jumbotron>
-
 			</div>
 		</>
 	)

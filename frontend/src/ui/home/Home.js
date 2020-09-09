@@ -39,11 +39,13 @@ export const Home = () => {
 			}}>
 			<h1>Welcome To Help My Garden</h1>
 			<p className="py-5">
-			This is a simple hero unit, a simple jumbotron-style component for calling
-			extra attention to featured content or information.
+			During this pandemic the My Garden Team understands the need for a hobby what could be better than gardening!
 			</p>
 			<p>
-			<Button href="/all-plants" variant="primary">Learn more</Button>
+				look through all of New Mexico's Plants bellow
+			</p>
+			<p>
+			<Button href="/all-plants" variant="primary">Search New Mexican Plants</Button>
 			</p>
 			</Jumbotron>
 			<Carousel>

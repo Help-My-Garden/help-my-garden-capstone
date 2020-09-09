@@ -29,6 +29,6 @@ export function MyListCard ({plant}) {
 					</a >
 					<button onClick={clickDeletePlant} className="btn btn-primary">Remove</button>
 			</div>
-	</>
+		</>
 	)
 }
