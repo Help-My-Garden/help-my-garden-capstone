@@ -9,7 +9,7 @@ import Jumbotron from 'react-bootstrap/cjs/Jumbotron'
 import Image from 'react-bootstrap/Image'
 import { fetchPlantByPlantId } from '../../store/plants'
 import { PlantCard } from '../allplants/PlantCard'
-import PlantBackground from '../sharedimg/plant-page-new.jfif'
+import PlantBackground from '../sharedimg/gina-santangelo-N7yXNocgRJg-unsplash.jpg'
 
 export const Plant = ({match}) => {
 // Returns the the userPosts store from redux and assigns it to the userPosts variable.
@@ -61,6 +61,8 @@ export const Plant = ({match}) => {
       </Navbar>
       <div className="container-fluid" style={{
         background: `url(${PlantBackground}) center fixed`,
+        backgroundSize:"cover",
+        height:"1300px",
       }}>
         <Container>
           <Row>

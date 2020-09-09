@@ -46,6 +46,7 @@ export const AllPlants = () => {
 			</div>
 			<div className="container-fluid" style={{
 				background: `url(${Background})center fixed`,
+
 			}}>
 				<SearchCom/>
 				<section className="container" style={{
