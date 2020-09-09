@@ -24,16 +24,15 @@ export const Home = () => {
 	};
 	const inputs = [];
 	useEffect(effects, inputs);
+
 	return (
 		<>
 			<div className="container m-auto p-0" style={{
-				backgroundColor: "#dbb2ac",
-				display: "block",
-				margin: "2rem 4rem 2rem 4rem",
+				backgroundColor: 'rgba(219,178,172,0.7)',
 		}}>
 			<NavbarCom/>
 			<Jumbotron className="text-center text-white" style={{
-				margin: "2rem 3em 2rem 3rem",
+				margin: "3rem",
 				backgroundImage: `url(${Image})`,
 				backgroundSize: "cover",
 				backgroundPosition: "50%",
@@ -51,7 +50,7 @@ export const Home = () => {
 				{plants.map(plant =>
 					(<Carousel.Item key = {plant.plantId}>
 						<img
-							style={{height:"800px", width:"500px", objectFit:"contain",}}
+							style={{height:"800px", objectFit:"contain",}}
 							className="d-block w-100"
 							src={plant.plantImageUrl}
 							alt={plant.plantCommonName}
@@ -73,7 +72,7 @@ export const Home = () => {
 				<div className="row">
 					<a href="https://docs.trefle.io/" className="col-4 mb-0 text-white">API:Trefle </a>
 					<a href="/about-us" className="col-4 mb-0 text-center text-white">Help My Garden Team</a>
-					<p className="col-4 mb-0 text-right">Last Updated:9/10/2020</p>
+					<p className="col-4 mb-0 text-right">Last Updated</p>
 				</div>
 			</footer>
 		</div>

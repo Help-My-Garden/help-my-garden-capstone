@@ -24,7 +24,7 @@ export function NavbarCom () {
 
 	return (
 		<>
-			<div className="container sticky-top">
+			<div className="container-fluid sticky-top">
 				<Navbar className="row fluid navbar-dark" collapseOnSelect expand="md">
 					<a href = "/" >
 						<img src = {image} alt = "Help My Garden logo" width="100"/>
