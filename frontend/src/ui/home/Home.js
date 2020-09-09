@@ -5,7 +5,8 @@ import {NavbarCom} from "./Navbar";
 import Jumbotron from "react-bootstrap/cjs/Jumbotron";
 import Button from "react-bootstrap/cjs/Button";
 import Carousel from "react-bootstrap/Carousel";
-import { fetchTenRandomPlants } from '../../store/plants'
+import { fetchTenRandomPlants } from '../../store/plants';
+import Image from '../sharedimg/Inner-home-page-background.jpg';
 
 
 export const Home = () => {
@@ -26,14 +27,16 @@ export const Home = () => {
 	return (
 		<>
 			<div className="container m-auto p-0" style={{
-			display: "block",
-			margin: "2rem 4rem 2rem 4rem",
-			backgroundColor: "grey",
+				backgroundColor: "#dbb2ac",
+				display: "block",
+				margin: "2rem 4rem 2rem 4rem",
 		}}>
 			<NavbarCom/>
-			<Jumbotron className="text-center text-white-50" style={{
+			<Jumbotron className="text-center text-white" style={{
 				margin: "2rem 3em 2rem 3rem",
-				backgroundColor: "black",
+				backgroundImage: `url(${Image})`,
+				backgroundSize: "cover",
+				backgroundPosition: "50%",
 			}}>
 			<h1>Welcome To Help My Garden</h1>
 			<p className="py-5">
@@ -62,14 +65,14 @@ export const Home = () => {
 			</Carousel>
 			<footer style={{
 				display: "block",
-				backgroundColor: "#343a40",
+				backgroundColor: "black",
 				margin: "2rem 0 0 0",
 				padding: "1rem 1rem 1rem 1rem",
 				color: "white",
 			}}>
 				<div className="row">
-					<a href="https://docs.trefle.io/" className="col-4 mb-0">API:Trefle </a>
-					<a href="/about-us" className="col-4 mb-0 text-center">Help My Garden Team</a>
+					<a href="https://docs.trefle.io/" className="col-4 mb-0 text-white">API:Trefle </a>
+					<a href="/about-us" className="col-4 mb-0 text-center text-white">Help My Garden Team</a>
 					<p className="col-4 mb-0 text-right">Last Updated</p>
 				</div>
 			</footer>
