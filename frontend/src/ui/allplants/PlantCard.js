@@ -67,7 +67,7 @@ export const PlantCard = ({ plant }) => {
 									borderRadius: "20px",
 									padding: "1rem",
 									marginLeft: ".5rem",
-									flexDirection: "row",
+
 								}} >
 									<ul>
 										<li>{plant.plantFamilyName}</li>

@@ -23,7 +23,9 @@ export function SearchCom () {
 					{/*	</label >*/}
 					{/*</div >*/}
 					<div className = "information col-md-12" style={{
-						alignContent:"center",
+						display:"flex",
+						justifyContent:"center",
+						textAlign: "center",
 					}} >
 						<label className = "form-label" >Plant Name
 							<input className = "form-control col-md-12" type = "text" name = "plantName" id = "plantName"
@@ -42,7 +44,10 @@ export function SearchCom () {
 					{/*					 placeholder = "Color" />*/}
 					{/*	</label >*/}
 					{/*</div >*/}
-					<div className="col-12 p-2">
+					<div className="col-12 p-2" style={{
+						display:"flex",
+						justifyContent:"center",
+					}} >
 						<Button>Search</Button>
 					</div>
 				</div>
