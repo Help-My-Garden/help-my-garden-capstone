@@ -7,7 +7,6 @@ export function SearchCom () {
 		<>
 			<section className="container-md" style={{
 				backgroundColor: "lightgrey",
-				margin: "2rem auto 2rem auto",
 				borderRadius: "20px",
 			}}>
 				<div className="row p-2">
@@ -23,7 +22,9 @@ export function SearchCom () {
 					{/*					 placeholder = "Plant Family" />*/}
 					{/*	</label >*/}
 					{/*</div >*/}
-					<div className = "information col-md-2" >
+					<div className = "information col-md-12" style={{
+						alignContent:"center",
+					}} >
 						<label className = "form-label" >Plant Name
 							<input className = "form-control col-md-12" type = "text" name = "plantName" id = "plantName"
 										 placeholder = "Plant Name" />

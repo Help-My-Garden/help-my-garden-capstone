@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import 'bootstrap/dist/css/bootstrap.css';
 import {PlantCard} from "./PlantCard";
 
-
+import Background from "../sharedimg/practice-background-garden.jfif"
 import Navbar from "react-bootstrap/Navbar";
 import image from "../sharedimg/world-logo-black.png";
 import Nav from "react-bootstrap/Nav";
@@ -24,8 +24,9 @@ export const AllPlants = () => {
  console.log(plants)
 	return (
 		<>
-			<div className="container-fluid" style={{
+			<div className="container-fluid sticky-top" style={{
 				backgroundColor: "black",
+
 			}}>
 				<Navbar className="row fluid navbar-dark" collapseOnSelect expand="md">
 					<a href = "/" >
@@ -43,16 +44,21 @@ export const AllPlants = () => {
 					</Navbar.Collapse>
 				</Navbar>
 			</div>
-			<SearchCom/>
+			<div className="container-fluid" style={{
+				background: `url(${Background})center fixed`,
+			}}>
+				<SearchCom/>
 				<section className="container" style={{
-					backgroundColor: "#5C7342",
+					backgroundColor: "rgb(114,104,86, .9)",
 					margin: "2rem auto 1rem auto",
 					padding: "1rem",
 				}}>
 					<div className="row">
 						{plants.map(plant => <PlantCard plant={plant} key={plant.plantId}/>)}
 					</div>
-			</section>
+				</section>
+			</div>
+
 		</>
 	)
 }

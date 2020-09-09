@@ -28,11 +28,13 @@ export const PlantCard = ({ plant }) => {
 		<>
 
 			<div className="col-md-6">
-				<Jumbotron>
+				<Jumbotron style={{
+					backgroundColor: "rgb(92,115,66)",
+				}}>
 					<Container>
 						<a href ={`/plant/${plant.plantId}`} >
 						<div className="row" style={{
-							// border:"solid 2px black",
+							border:"solid 2px black",
 						}}>
 
 
