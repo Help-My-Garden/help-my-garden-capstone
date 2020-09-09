@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { httpConfig } from '../../shared/utils/http-config'
 import {getAllPlants} from "../../store/plants";
 import { Container, Jumbotron } from 'react-bootstrap'
-// import { Card } from 'react-bootstrap'
-// import {CardBody} from 'reactstrap'
+
 
 export const PlantCard = ({ plant }) => {
 
@@ -70,12 +69,22 @@ export const PlantCard = ({ plant }) => {
 
 								}} >
 									<ul>
+										<li style={{
+											color:"black",
+										}}><strong>Family Name</strong></li>
 										<li>{plant.plantFamilyName}</li>
+										<li style={{
+											color:"black",
+										}}><strong>Scientific Name</strong></li>
 										<li>{plant.plantScientificName}</li>
+										<li style={{
+											color:"black",
+										}}><strong>Plant Color</strong></li>
 										<li>{plant.plantColor}</li>
+										<li style={{
+											color:"black",
+										}}><strong>Plant Duration</strong></li>
 										<li>{plant.plantDuration}</li>
-										<li>{plant.plantSunlight}</li>
-										<li>{plant.plantSize}</li>
 									</ul>
 								</div >
 

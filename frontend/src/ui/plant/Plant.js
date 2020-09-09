@@ -85,12 +85,33 @@ export const Plant = ({match}) => {
                     }}>
 
                       <ul>
+                        <li style={{
+                          color:"black",
+                        }}><strong>Plant Name</strong></li>
                         <li>{plant && plant.plantCommonName}</li>
+                        <li style={{
+                          color:"black",
+                        }}><strong>Scientific Name</strong></li>
                         <li>{plant && plant.plantScientificName}</li>
+                        <li style={{
+                          color:"black",
+                        }}><strong>Family Name</strong></li>
                         <li>{plant && plant.plantFamilyName}</li>
+                        <li style={{
+                          color:"black",
+                        }}><strong>Plant Color</strong></li>
                         <li>{plant && plant.plantColor}</li>
+                        <li style={{
+                          color:"black",
+                        }}><strong>Plant Duration</strong></li>
                         <li>{plant && plant.plantDuration}</li>
+                        <li style={{
+                          color:"black",
+                        }}><strong>Hours of Sunlight Needed</strong></li>
                         <li>{plant && plant.plantSunlight}</li>
+                        <li style={{
+                          color:"black",
+                        }}><strong>Plant Average Height</strong></li>
                         <li>{plant && plant.plantSize}</li>
                       </ul>
                     </Col>

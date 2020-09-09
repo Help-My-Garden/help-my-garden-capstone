@@ -44,8 +44,8 @@ export const AboutUs = (props) => {
               <p>We are a team of web developers in New Mexico with a goal. That goal is to make beautiful websites that have reusable easy to understand content. One of the things we dislike is an unusable site that has way to many bells and whistles. Sites should be something easy to use rather than needing to come with an instruction manual. With this vision in mind Help My Garden was born.</p>
 
             <Jumbotron className="row" style={{backgroundColor: "#85b1a0", border: "solid black 1px", padding: "1rem"}}>
-              <h2>Dylan Deraad</h2>
-              <p>Happy little ipsum. That'll be our little secret. And just go straight in like your going to stab it. And barely touch it...barely touch it. The secret to doing anything is believing that you can do it. Anything that you believe you can do strong enough, you can do. Anything. As long as you believe. We don't make mistakes, we just have happy accidents. If you did this with blue, and you went over it with yellow, you would end up with a nice green sky. And that's not the thing we are looking for. You can put as many or as few as you want in your world. We're gonna make some big decisions in our little world. There's nothing wrong with having a tree as a friend. When we teach people to paint this is the one they fall in love with. It works so well. Little raccoons and old possums 'n' stuff all live up in here. They've got to have a little place to sit. Oh, that would make a nice place to fish. I like fishing, but I'm not a very good fisherman. I always throw the fish back into the water, just put a band-aid on his mouth, tap 'im on the patootie and let him on his way. And maybe some day, if I'm lucky, I'll get to catch him again. Talk to the tree, make friends with it. I can't go over 30 minutes, because we have a mean ol' director with no sense of humor. Oh, that would make a nice place to fish. I like fishing, but I'm not a very good fisherman.</p>
+              <h2>Dylan DeRaad</h2>
+              <p>Thank you for checking out our site it means the world to me. Hi I'm Dylan a New Mexican born and Raised ... just like Help My Garden's plants!! If asked about my passions it would be snowboarding first :) but being out in nature and gardening a solid second. I hope you enjoy my site if you want to get in touch with me check out my linked in.</p>
             </Jumbotron>
             <Jumbotron className="row" style={{backgroundColor: "#85b1a0", border: "solid black 1px", padding: "1rem"}}>
               <h2>James Mathieus Jr</h2>
@@ -63,7 +63,7 @@ export const AboutUs = (props) => {
         <div className="row justify-content-center">
           <div className="col-md-2 text-center">
             <a href="https://www.linkedin.com/in/dylan-deraad-684b8118a/" className="btn text-white">
-              <p>Dylan Draad</p>
+              <p>Dylan DeRaad</p>
               <FontAwesomeIcon icon={faLinkedin} color="blue" size="3x"/>
             </a>
           </div>

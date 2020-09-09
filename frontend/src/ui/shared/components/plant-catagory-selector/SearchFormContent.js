@@ -21,7 +21,7 @@ export const SearchFormContent = (props) => {
         {/*controlId must match what is passed to the initialValues prop*/}
 
         <div className="form-group">
-          <label htmlFor="profileHandle">Say Something</label>
+          <label htmlFor="profileHandle"></label>
           <div className="input-group">
             <div className="input-group-prepend">
               <div className="input-group-text">
@@ -33,7 +33,7 @@ export const SearchFormContent = (props) => {
               name="plantCommonName"
               type="text"
               value={values.plantCommonName}
-              placeholder="Say Something"
+              placeholder="find plants by their name"
               onChange={handleChange}
               onBlur={handleBlur}
 

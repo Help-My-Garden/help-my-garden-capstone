@@ -1,12 +1,13 @@
 import React, {useEffect} from "react";
-
+import LittleBackground from "../sharedimg/pots-jumgo.jpg"
 import Navbar from "react-bootstrap/Navbar";
 import image from "../sharedimg/world-logo-black.png";
 import Nav from "react-bootstrap/Nav";
 import {MyListCard} from "./MyListCard";
 import { useDispatch, useSelector } from 'react-redux'
 import {fetchPlantByProfileId} from "../../store/plants";
-import { PlantSearchForm } from '../shared/components/plant-catagory-selector/Search'
+import { Jumbotron, Container } from 'react-bootstrap'
+
 
 export const MyPlantList = () =>{
 
@@ -34,8 +35,17 @@ export const MyPlantList = () =>{
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
+			<Jumbotron style={{
+				background: `url(${LittleBackground}) bottom fixed`,
+			}}>
+				<Container>
+					<h1 style={{
+						display: "flex",
+						justifyContent: "center",
+					}}><strong>My Plant List</strong></h1>
+				</Container>
+			</Jumbotron>
 			<div className="container-fluid" style={{height: "2400px"}}>
-			<PlantSearchForm/>
 			<div className="container" style={{
 				backgroundColor: "#efefef",
 				borderRadius: "5px"

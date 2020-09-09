@@ -7,6 +7,7 @@ import Button from "react-bootstrap/cjs/Button";
 import Carousel from "react-bootstrap/Carousel";
 import { fetchTenRandomPlants } from '../../store/plants';
 import Image from '../sharedimg/Inner-home-page-background.jpg';
+import { Card } from 'react-bootstrap'
 
 
 export const Home = () => {
@@ -37,16 +38,23 @@ export const Home = () => {
 				backgroundSize: "cover",
 				backgroundPosition: "50%",
 			}}>
-			<h1>Welcome To Help My Garden</h1>
-			<p className="py-5">
-			During this pandemic the My Garden Team understands the need for a hobby what could be better than gardening!
-			</p>
-			<p>
-				look through all of New Mexico's Plants bellow
-			</p>
-			<p>
-			<Button href="/all-plants" variant="primary">Search New Mexican Plants</Button>
-			</p>
+				<Card flui style={{
+					backgroundColor: "rgb(62,100,85, .5)",
+				}}>
+					<h1>Welcome To Help My Garden</h1>
+
+					<p className="py-5">
+						During this pandemic the My Garden Team understands the need for a hobby what could be better than gardening!
+					</p>
+					<p>
+						look through all of New Mexico's Plants bellow
+					</p>
+				</Card>
+					<p>
+						<Button href="/all-plants" variant="primary">Search New Mexican Plants</Button>
+					</p>
+
+
 			</Jumbotron>
 			<Carousel>
 				{plants.map(plant =>

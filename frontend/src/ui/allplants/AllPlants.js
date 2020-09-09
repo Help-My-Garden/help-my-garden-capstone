@@ -6,7 +6,7 @@ import Background from "../sharedimg/practice-background-garden.jfif"
 import Navbar from "react-bootstrap/Navbar";
 import image from "../sharedimg/world-logo-black.png";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
+// import NavDropdown from "react-bootstrap/NavDropdown";
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllPlants } from '../../store/plants'
 import { PlantSearchForm } from '../shared/components/plant-catagory-selector/Search'
