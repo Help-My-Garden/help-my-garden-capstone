@@ -15,6 +15,7 @@ import {Plant} from "./ui/plant/Plant";
 import {MyPlantList} from "./ui/myplantlist/MyPlantList";
 import {AboutUs} from './ui/aboutus/AboutUs'
 import {FourOhFour} from "./ui/fourohfour/FourOhFour";
+import Image from "../src/ui/sharedimg/Home-page-background.jpg";
 
 
 import reducer from './store/index'
@@ -28,18 +29,20 @@ library.add(faStroopwafel, faEnvelope, faKey, faDove, faPhone, faPencilAlt);
 
 const Routing = (store) => (
 	<>
-		<Provider store={store}>
-			<BrowserRouter>
-				<Switch>
-					<Route exact path="/plant/:plantId" component={Plant}/>
-					<Route exact path="/my-plant-list" component={MyPlantList}/>
-					<Route exact path="/all-plants" component={AllPlants}/>
-					<Route exact path="/about-us" component={AboutUs}/>
-					<Route exact path="/" component={Home}/>
-					<Route component={FourOhFour}/>
-				</Switch>
-			</BrowserRouter>
-		</Provider>
+		<div className="container-fluid" style={{backgroundImage: `url(${Image})`, backgroundAttachment: "fixed", backgroundSize: "cover", padding: "0",}}>
+			<Provider store={store}>
+				<BrowserRouter>
+					<Switch>
+						<Route exact path="/plant/:plantId" component={Plant}/>
+						<Route exact path="/my-plant-list" component={MyPlantList}/>
+						<Route exact path="/all-plants" component={AllPlants}/>
+						<Route exact path="/about-us" component={AboutUs}/>
+						<Route exact path="/" component={Home}/>
+						<Route component={FourOhFour}/>
+					</Switch>
+				</BrowserRouter>
+			</Provider>
+		</div>
 	</>
 );
 

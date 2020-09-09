@@ -36,9 +36,7 @@ export const AllPlants = () => {
 					<Navbar.Collapse id="responsive-navbar-nav">
 						<Nav className="ml-auto">
 							<Nav.Link href="/" style={{color: "white",}}>Home</Nav.Link>
-							<NavDropdown title="Account " id="collapsible-nav-dropdown">
-								<NavDropdown.Item href="/my-plant-list">My list</NavDropdown.Item>
-							</NavDropdown>
+							<Nav.Link href="/my-plant-list" style={{color: "white",}}>My list</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>

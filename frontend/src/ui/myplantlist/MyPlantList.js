@@ -33,15 +33,18 @@ export const MyPlantList = () =>{
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
-		<SearchCom/>
-		<div className="container" style={{
-			backgroundColor: "grey",
-		}}>
-			<div className="row">
-				{plants.map(plant => <MyListCard plant={plant} key={plant.plantId}/>)}
+			<div className="container-fluid" style={{height: "2400px"}}>
+			<SearchCom/>
+			<div className="container" style={{
+				backgroundColor: "#efefef",
+				borderRadius: "5px"
+			}}>
+				<div className="row justify-content-md-around">
+					{plants.map(plant => <MyListCard plant={plant} key={plant.plantId}/>)}
+				</div>
 			</div>
-		</div>
-			</>
+			</div>
+		</>
 	)
 }
 
