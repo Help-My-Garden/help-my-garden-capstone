@@ -44,7 +44,7 @@ export const AboutUs = (props) => {
               <h4>Dylan Deraad</h4>
               <p>Hello!</p>
               <h4>James Mathieus Jr</h4>
-              <p>Hi! Welcome to Help My Garden, <br/> I am one of the creators of Help My Garden. I want to thank you for using our site it means a lot to me. I am a Web Developer in the state of New Mexico. I was born in Paducah, Kentucky in 1992. I moved to New Mexico in 1997 when I was 5 years old. </p>
+              <p>Hi, Welcome to our site! <br/> I am one of the creators of Help My Garden. To get started I'm going to tell you a little bit about my background. I am a Web Developer in the state of New Mexico. I was born in Paducah, Kentucky in 1992 and moved to New Mexico in 1997 when I was 5. I started playing with computers and other electronics in my teens which eventually turned into a passion for technology. I found myself wanting to figure out how everything ticked and through a lot of trial and error I started to understand how the programs and software worked. At this point in my life I knew that I wanted to pursue a career in technology I just wasn't sure what field to choose, and believe me when I say there are a lot to choose from. So I chose... you guessed it! To start a family and forget about my hopes dreams. I was just kidding about the hopes and dreams part but I did start dating my now wife and had 2 beautiful healthy children who needed my care and attention. As a result I put my dreams of the tech world aside until I could put more time into my passion. I realise now that that time will never just come I have to make room for it, and that's exactly what I'm doing. Since that decision I've been running at my passion full force and have no intentions of slowing down anytime soon. I hope that passion and drive shows through in mine and Dylan's project. We are both very dedicated to our craft and truly enjoy what we do. With that being said, I want to personally thank you for using our site it means a lot to us. Thank you.</p>
             </Jumbotron>
           </Col>
         </Row>
@@ -56,22 +56,22 @@ export const AboutUs = (props) => {
       }}>
         <div className="row justify-content-center">
           <div className="col-md-2 text-center">
-            <button className="btn text-white">
+            <a href="https://www.linkedin.com/in/dylan-deraad-684b8118a/" className="btn text-white">
               <p>Dylan Draad</p>
               <FontAwesomeIcon icon={faLinkedin} color="blue" size="3x"/>
-            </button>
+            </a>
           </div>
           <div className="col-md-2 text-center">
-            <button className="btn text-white">
+            <a href="https://github.com/Help-My-Garden" className="btn text-white">
               <p>Help My Garden</p>
               <FontAwesomeIcon icon={faGithub} color="green" size="3x" />
-            </button>
+            </a>
           </div>
           <div className="col-md-2 text-center">
-            <button className="btn text-white">
+            <a href="https://www.linkedin.com/in/james-mathieus-7674171a9/" className="btn text-white">
               <p>James Mathieus Jr</p>
               <FontAwesomeIcon icon={faLinkedin} color="blue" size="3x"/>
-            </button>
+            </a>
           </div>
         </div>
       </footer>

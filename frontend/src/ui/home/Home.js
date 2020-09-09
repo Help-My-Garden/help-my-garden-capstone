@@ -73,7 +73,7 @@ export const Home = () => {
 				<div className="row">
 					<a href="https://docs.trefle.io/" className="col-4 mb-0 text-white">API:Trefle </a>
 					<a href="/about-us" className="col-4 mb-0 text-center text-white">Help My Garden Team</a>
-					<p className="col-4 mb-0 text-right">Last Updated</p>
+					<p className="col-4 mb-0 text-right">Last Updated:9/10/2020</p>
 				</div>
 			</footer>
 		</div>
