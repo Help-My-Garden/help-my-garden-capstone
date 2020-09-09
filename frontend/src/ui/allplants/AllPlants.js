@@ -9,7 +9,8 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllPlants } from '../../store/plants'
-import { SearchCom } from '../shared/components/plant-catagory-selector/Search'
+import { PlantSearchForm } from '../shared/components/plant-catagory-selector/Search'
+
 
 
 export const AllPlants = () => {
@@ -22,6 +23,7 @@ export const AllPlants = () => {
 	const inputs = [];
 	useEffect(effects, inputs);
  console.log(plants)
+
 	return (
 		<>
 			<div className="container-fluid sticky-top" style={{
@@ -46,7 +48,7 @@ export const AllPlants = () => {
 				background: `url(${Background})center fixed`,
 
 			}}>
-				<SearchCom/>
+				<PlantSearchForm/>
 				<section className="container" style={{
 					backgroundColor: "rgb(114,104,86, .9)",
 					margin: "2rem auto 1rem auto",

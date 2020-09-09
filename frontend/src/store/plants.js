@@ -23,11 +23,14 @@ const slice = createSlice({
 
        return plant.plantId !== action.payload.plantId})
 
+    },
+    getPlantsByPlantCommonName : (plants, action) => {
+      return action.payload
     }
   }
 })
 
-export const {getAllPlants, getPlantByPlantId, getTenRandomPlants, getPlantsByProfileId, removePlantByPlantId} = slice.actions
+export const {getAllPlants, getPlantByPlantId, getTenRandomPlants, getPlantsByProfileId, removePlantByPlantId, getPlantsByPlantCommonName} = slice.actions
 
 export const fetchAllPlants = () => async (dispatch) => {
   const {data} =  await httpConfig.get("/apis/plants/");
@@ -48,4 +51,9 @@ export const fetchPlantByProfileId= () => async (dispatch) => {
   const {data} =  await httpConfig.get(`/apis/plants/plant-profile`);
   dispatch(getPlantsByProfileId(data));
 };
+
+export const fetchPlantsByCommonName = (name) => async (dispatch) => {
+  const{data} = await httpConfig.get(`/apis/plants/plant-common-name/${name}`);
+  dispatch(getPlantsByPlantCommonName(data));
+}
 export default slice.reducer

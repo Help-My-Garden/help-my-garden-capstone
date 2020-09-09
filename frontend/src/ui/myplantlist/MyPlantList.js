@@ -1,11 +1,12 @@
 import React, {useEffect} from "react";
-import {SearchCom} from "../shared/components/plant-catagory-selector/Search";
+
 import Navbar from "react-bootstrap/Navbar";
 import image from "../sharedimg/world-logo-black.png";
 import Nav from "react-bootstrap/Nav";
 import {MyListCard} from "./MyListCard";
 import { useDispatch, useSelector } from 'react-redux'
 import {fetchPlantByProfileId} from "../../store/plants";
+import { PlantSearchForm } from '../shared/components/plant-catagory-selector/Search'
 
 export const MyPlantList = () =>{
 
@@ -34,7 +35,7 @@ export const MyPlantList = () =>{
 				</Navbar.Collapse>
 			</Navbar>
 			<div className="container-fluid" style={{height: "2400px"}}>
-			<SearchCom/>
+			<PlantSearchForm/>
 			<div className="container" style={{
 				backgroundColor: "#efefef",
 				borderRadius: "5px"
