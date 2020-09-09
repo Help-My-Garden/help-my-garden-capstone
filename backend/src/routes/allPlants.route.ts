@@ -13,7 +13,7 @@ import {isLoggedIn} from "../controllers/isLoggedIn.controller";
 
 const allPlantsRouter = Router();
 
-allPlantsRouter.route('/').get(getPlantsController)
+allPlantsRouter.route('/page/:page').get(getPlantsController)
 
 allPlantsRouter.route('/plant-profile').get(isLoggedIn, getPlantsByPlantProfileIdController)
 

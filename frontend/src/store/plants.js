@@ -6,7 +6,7 @@ const slice = createSlice({
   initialState: [],
   reducers: {
     getAllPlants: (plants, action) => {
-      return action.payload
+      return [...plants,...action.payload]
     },
     getPlantByPlantId : (plants, action) => {
       plants.push(action.payload)
@@ -29,8 +29,8 @@ const slice = createSlice({
 
 export const {getAllPlants, getPlantByPlantId, getTenRandomPlants, getPlantsByProfileId, removePlantByPlantId} = slice.actions
 
-export const fetchAllPlants = () => async (dispatch) => {
-  const {data} =  await httpConfig.get("/apis/plants/");
+export const fetchAllPlants = (page = 0) => async (dispatch) => {
+  const {data} =  await httpConfig.get(`/apis/plants/page/${page}`);
   dispatch(getAllPlants(data));
 };
 

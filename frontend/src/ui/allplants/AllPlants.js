@@ -14,6 +14,20 @@ import { SearchCom } from '../shared/components/plant-catagory-selector/Search'
 
 export const AllPlants = () => {
 
+	let isScrolling = false
+	const checkPagination = (event) => {
+		clearTimeout(isScrolling)
+		isScrolling = setTimeout(()=> {endScroll()}, 66)
+	}
+
+	const endScroll = () => {
+		console.log(window.scrollY)
+		console.log(document.body.offsetHeight)
+			if(window.scrollY > document.height - 1100) {
+				fetchAllPlants(1);
+			}
+	}
+
 	const plants = useSelector(state => state.plants ? state.plants : []);
 	const dispatch = useDispatch();
 	const effects = () => {
@@ -24,6 +38,7 @@ export const AllPlants = () => {
  console.log(plants)
 	return (
 		<>
+			<div onWheel={checkPagination}>
 			<div className="container-fluid" style={{
 				backgroundColor: "black",
 			}}>
@@ -51,6 +66,7 @@ export const AllPlants = () => {
 						{plants.map(plant => <PlantCard plant={plant} key={plant.plantId}/>)}
 					</div>
 			</section>
+			</div>
 		</>
 	)
 }

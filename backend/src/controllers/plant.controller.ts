@@ -14,7 +14,8 @@ import {Profile} from "../../utils/interfaces/Profile";
 export async function getPlantsController(request: Request, response: Response): Promise<Response | void>{
 
     try {
-        const data = await selectAllPlants()
+        const {page} = request.params
+        const data = await selectAllPlants(page)
         // return the response
         const status: Status = {status: 200, message: null, data};
         return response.json(status);
