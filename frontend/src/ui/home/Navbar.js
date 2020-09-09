@@ -4,10 +4,10 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import image from "../../../sharedimg/world-logo-black.png"
+import image from "../sharedimg/world-logo-black.png"
 import {useState} from "react";
-import { SignInForm } from './sign-in/SignInForm'
-import { SignUpForm } from './sign-up/SignUpForm'
+import { SignInForm } from '../shared/components/main-nav/sign-in/SignInForm'
+import { SignUpForm } from '../shared/components/main-nav/sign-up/SignUpForm'
 
 
 
@@ -34,9 +34,10 @@ export function NavbarCom () {
 					<Navbar.Collapse id="responsive-navbar-nav">
 						<Nav className="ml-auto">
 							<Nav.Link href="/all-plants" style={{color: "white",}}>Search</Nav.Link>
-							<Nav.Link href="#creat-account" onClick={handleShow2} style={{color: "white",}}>Creat Account</Nav.Link>
+							<Nav.Link href="" onClick={handleShow2} style={{color: "white",}}>Creat Account</Nav.Link>
 							<NavDropdown title="Account " id="collapsible-nav-dropdown">
-								<NavDropdown.Item href="#log-in-modal" onClick={handleShow}>Log In</NavDropdown.Item>
+								<NavDropdown.Item href="" onClick={handleShow}>Log In</NavDropdown.Item>
+								<NavDropdown.Item href="/my-plant-list">My List</NavDropdown.Item>
 							</NavDropdown>
 						</Nav>
 					</Navbar.Collapse>

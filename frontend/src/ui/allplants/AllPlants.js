@@ -45,11 +45,13 @@ export const AllPlants = () => {
 			</div>
 			<SearchCom/>
 				<section className="container" style={{
-					backgroundColor: "grey",
+					backgroundColor: "#5C7342",
 					margin: "2rem auto 1rem auto",
 					padding: "1rem",
 				}}>
-					{plants.map(plant => <PlantCard plant={plant} key={plant.plantId}/>)}
+					<div className="row">
+						{plants.map(plant => <PlantCard plant={plant} key={plant.plantId}/>)}
+					</div>
 			</section>
 		</>
 	)

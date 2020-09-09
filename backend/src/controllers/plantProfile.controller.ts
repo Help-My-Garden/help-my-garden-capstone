@@ -25,16 +25,17 @@ export async function togglePlantProfileController(request: Request, response: R
             plantProfilePlantId,
         }
         const select = await selectPlantProfile(plantProfile)
+        let message = "An error occurred"
         // @ts-ignore
         if (select[0]){
-            const result = await deletePlantProfile(plantProfile)
+            message = <string> await deletePlantProfile(plantProfile)
         }else{
-            const result = await insertPlantProfile(plantProfile)
+            message = <string> await insertPlantProfile(plantProfile)
         }
 
         const status: Status = {
             status: 200,
-            message: 'Plant successfully saved ',
+            message: 'Plant successfully updated',
             data: null
         };
         return response.json(status);

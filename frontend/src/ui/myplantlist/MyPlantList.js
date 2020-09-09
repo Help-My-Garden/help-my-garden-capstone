@@ -1,22 +1,24 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {SearchCom} from "../shared/components/plant-catagory-selector/Search";
 import Navbar from "react-bootstrap/Navbar";
 import image from "../sharedimg/world-logo-black.png";
 import Nav from "react-bootstrap/Nav";
 import {MyListCard} from "./MyListCard";
 import { useDispatch, useSelector } from 'react-redux'
+import {fetchPlantByProfileId} from "../../store/plants";
 
 export const MyPlantList = () =>{
 
-	const plantProfile = useSelector(state => state.plantProfileProfileId ? state.plantProfileProfileId : []);
+	const plants = useSelector(state => state.plants ? state.plants : []);
 	const dispatch = useDispatch();
 	const effects = () => {
+		dispatch(fetchPlantByProfileId())
 	};
 	const inputs = [];
-
+	useEffect(effects, inputs);
 	return(
 		<>
-			<Navbar className="row fluid navbar-dark" collapseOnSelect expand="md" style={{
+			<Navbar className="container-fluid navbar-dark" collapseOnSelect expand="md" style={{
 				backgroundColor: "black",
 			}}>
 				<a href = "/" >
@@ -35,7 +37,9 @@ export const MyPlantList = () =>{
 		<div className="container" style={{
 			backgroundColor: "grey",
 		}}>
-			<MyListCard/>
+			<div className="row">
+				{plants.map(plant => <MyListCard plant={plant} key={plant.plantId}/>)}
+			</div>
 		</div>
 			</>
 	)

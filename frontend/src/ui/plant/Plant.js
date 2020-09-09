@@ -66,20 +66,20 @@ export const Plant = ({match}) => {
               <Container>
                 <Row>
                   <Col  md="6">
-                    <Image src="React-Static-Example.jpg" fluid />
+                    <Image src= {plant && plant.plantImageUrl} alt = "trefle database plant image" style = {{
+                      width: "300px",
+                    }}  />
                   </Col>
                   <Col md="6">
 
                     <ul>
                       <li>{plant && plant.plantCommonName}</li>
+                      <li>{plant && plant.plantScientificName}</li>
+                      <li>{plant && plant.plantFamilyName}</li>
                       <li>{plant && plant.plantColor}</li>
-                      <li>Family Name:</li>
-                      <li>Common Name:</li>
-                      <li>Scientific Name:</li>
-                      <li>Color:</li>
-                      <li>Duration:</li>
-                      <li>Light Preference:</li>
-                      <li>Size:</li>
+                      <li>{plant && plant.plantDuration}</li>
+                      <li>{plant && plant.plantSunlight}</li>
+                      <li>{plant && plant.plantSize}</li>
                     </ul>
                   </Col>
                 </Row>
