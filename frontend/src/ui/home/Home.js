@@ -41,13 +41,13 @@ export const Home = () => {
 				<Card flui style={{
 					backgroundColor: "rgb(62,100,85, .5)",
 				}}>
-					<h1>Welcome To Help My Garden</h1>
+					<h1>Welcome to <strong>Help My Garden</strong></h1>
 
 					<p className="py-5">
-						During this pandemic the My Garden Team understands the need for a hobby what could be better than gardening!
+						During this pandemic the Help My Garden Team understands the need for a hobby... What could be better than gardening!
 					</p>
 					<p>
-						look through all of New Mexico's Plants bellow
+						Look through all of New Mexico's Plants bellow
 					</p>
 				</Card>
 					<p>
