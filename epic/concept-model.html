@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,8 +6,54 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <title>conceptual model</title>
 </head>
 <body>
+<div>
+    <img src="hopefullyLastERD.png" alt="erd for Help My Garden">
+</div>
+<div>
+    <h1>Profile</h1>
+    <ul>
+        <li>Profile Id (PK)</li>
+        <li>ProfileName</li>
+        <li>ProfileEmail</li>
+        <li>profileHash</li>
+        <li>profileActivationTocken</li>
+    </ul>
+</div>
+<div id="spacer1">
 
+</div>
+<div>
+    <h1>Plant</h1>
+    <ul>
+        <li>Plant id (PK)</li>
+        <li>PlantFamilyName</li>
+        <li>PlantCommonName</li>
+        <li>PlantScientificName</li>
+        <li>PlantColor</li>
+        <li>PlantImageUrl</li>
+        <li>PlantDuration</li>
+        <li>PlantSunLight</li>
+        <li>PlantSize</li>
+    </ul>
+</div>
+<div id="spacer2">
+
+</div>
+<div id="spacer3">
+
+</div>
+<div>
+    <h1>PlantProfile</h1>
+    <ul>
+        <li>PlantProfile id (PK)</li>
+        <li>PlantProfilePlant id (FK)</li>
+        <li>PlantProfileProfile id (FK)</li>
+    </ul>
+</div>
 </body>
 </html>
+
+
