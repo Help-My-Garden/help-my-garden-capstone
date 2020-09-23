@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import * as Yup from "yup";
 import {Formik} from "formik";
 import {useDispatch} from "react-redux";
-import { fetchAllPlants, fetchPlantsByCommonName } from "../../../../store/plants";
+import { fetchPlantsByCommonName } from "../../../../store/plants";
 import { SearchFormContent } from './SearchFormContent'
 
 export const PlantSearchForm = () => {
@@ -20,9 +20,7 @@ export const PlantSearchForm = () => {
 
 	const submitSearch = (values) => {
 
-
 						dispatch(fetchPlantsByCommonName(values.plantCommonName))
-
 
 	};
 
