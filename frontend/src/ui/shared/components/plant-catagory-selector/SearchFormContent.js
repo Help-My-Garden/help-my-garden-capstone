@@ -47,6 +47,33 @@ export const SearchFormContent = (props) => {
             )
           }
         </div>
+        <div className="form-group">
+          <label htmlFor="profileHandle"></label>
+          <div className="input-group">
+            <div className="input-group-prepend">
+              <div className="input-group-text">
+                <FontAwesomeIcon icon="pencil-alt"/>
+              </div>
+            </div>
+            <input
+              className="form-control"
+              name="plantColor"
+              type="text"
+              value={values.plantColor}
+              placeholder="find plants by their color"
+              onChange={handleChange}
+              onBlur={handleBlur}
+
+            />
+          </div>
+          {
+            errors.plantColor && touched.plantColor && (
+              <div className="alert alert-danger">
+                {errors.plantColor}
+              </div>
+            )
+          }
+        </div>
 
         <div className="form-group">
           <button className="btn btn-primary mb-2" type="submit">Submit</button>
