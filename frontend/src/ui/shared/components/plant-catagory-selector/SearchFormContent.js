@@ -38,12 +38,14 @@ export const SearchFormContent = (props) => {
               onBlur={handleBlur}
 
             />
+            <input/>
           </div>
           {
             errors.plantCommonName && touched.plantCommonName && (
               <div className="alert alert-danger">
                 {errors.plantCommonName}
               </div>
+
             )
           }
         </div>
