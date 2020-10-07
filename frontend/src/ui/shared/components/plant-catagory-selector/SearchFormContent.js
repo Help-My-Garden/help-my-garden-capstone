@@ -38,7 +38,15 @@ export const SearchFormContent = (props) => {
               onBlur={handleBlur}
 
             />
-            <input/>
+            <input
+            className="form-control"
+            name="plantCommonName"
+            type="text"
+            value={values.plantColor}
+            placeholder="find plants by their color"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            />
           </div>
           {
             errors.plantCommonName && touched.plantCommonName && (
@@ -49,6 +57,7 @@ export const SearchFormContent = (props) => {
             )
           }
         </div>
+
 
         <div className="form-group">
           <button className="btn btn-primary mb-2" type="submit">Submit</button>
