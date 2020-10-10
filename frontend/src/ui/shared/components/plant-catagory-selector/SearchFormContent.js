@@ -55,6 +55,16 @@ export const SearchFormContent = (props) => {
               </div>
 
             )
+
+          }
+          {
+            errors.plantColor && touched.plantColor && (
+              <div className="alert alert-danger">
+                {errors.plantColor}
+              </div>
+
+            )
+
           }
         </div>
 
